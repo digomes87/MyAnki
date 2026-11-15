@@ -79,6 +79,21 @@ pub fn streak(history: &[HistoryEntry], today: NaiveDate) -> u32 {
     count
 }
 
+/// Itens cuja PRIMEIRA revisão (estreia) foi hoje — a fonte é o histórico,
+/// então re-respostas do mesmo item (ex.: Errei → volta na sessão) não contam duas vezes.
+pub fn introduced_today(history: &[HistoryEntry], today: NaiveDate, keys: &HashSet<String>) -> u32 {
+    let mut first: std::collections::HashMap<&str, NaiveDate> = std::collections::HashMap::new();
+    for e in history {
+        if keys.contains(&e.id) {
+            let cur = first.entry(e.id.as_str()).or_insert(e.date);
+            if e.date < *cur {
+                *cur = e.date;
+            }
+        }
+    }
+    first.values().filter(|&&d| d == today).count() as u32
+}
+
 /// Retenção (proporção de acertos) numa janela de dias até hoje.
 pub fn retention(history: &[HistoryEntry], window_days: u32, today: NaiveDate) -> Option<f32> {
     let cutoff = today.checked_sub_days(Days::new(window_days as u64))?;

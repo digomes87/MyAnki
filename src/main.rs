@@ -146,16 +146,9 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
         da.cmp(&db).then_with(|| a.key.cmp(&b.key))
     });
 
-    // novos: sem estado; respeitando o limite diário (contando o que já estreou hoje)
-    let introduced_today = items
-        .iter()
-        .filter(|it| {
-            store
-                .schedule
-                .get(&it.key)
-                .is_some_and(|s| s.reps == 1 && s.last == Some(today))
-        })
-        .count() as u32;
+    // novos: sem estado; respeitando o limite diário (estreias de hoje vêm do histórico)
+    let selected_keys: HashSet<String> = items.iter().map(|it| it.key.clone()).collect();
+    let introduced_today = state::introduced_today(&store.history(), today, &selected_keys);
     let new_slots = new_per_day.saturating_sub(introduced_today) as usize;
     let fresh: Vec<&Item> = items
         .iter()
@@ -165,12 +158,29 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
 
     let due_count = due.len();
     let fresh_count = fresh.len();
+    let remaining_new = items
+        .iter()
+        .filter(|it| !store.schedule.contains_key(&it.key))
+        .count() as u32;
     let mut queue: Vec<Item> = due.into_iter().chain(fresh).cloned().collect();
     if queue.is_empty() {
-        println!(
-            "{}",
-            ui::green("Nada pra revisar hoje ✓ volte amanhã (ou --new N para forçar novos)")
-        );
+        if remaining_new > 0 && introduced_today >= new_per_day {
+            println!("{}", ui::yellow("Fila vazia: limite diário de novos já estourado"));
+            println!(
+                "  hoje você já estreou {} novos neste(s) deck(s) — o comando pediu teto {new_per_day}",
+                introduced_today
+            );
+            println!("  restam {remaining_new} novos por estrear");
+            println!(
+                "  {} ou volte amanhã (os de hoje voltam como vencidos)",
+                ui::cyan(&format!("→ use --new {} para estrear mais agora", introduced_today + 1))
+            );
+        } else {
+            println!(
+                "{}",
+                ui::green("Nada pra revisar hoje ✓ todos os cards estão agendados — volte amanhã")
+            );
+        }
         return Ok(());
     }
 

@@ -238,5 +238,93 @@
     "lapses": 0,
     "due": "2026-11-16",
     "last": "2026-11-15"
+  },
+  "italiano-0011#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0001#A": {
+    "ease": 2.15,
+    "interval": 2,
+    "reps": 2,
+    "lapses": 1,
+    "due": "2026-11-17",
+    "last": "2026-11-15"
+  },
+  "rust-0002#A": {
+    "ease": 2.15,
+    "interval": 2,
+    "reps": 2,
+    "lapses": 1,
+    "due": "2026-11-17",
+    "last": "2026-11-15"
+  },
+  "rust-0003#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0004#A": {
+    "ease": 2.3,
+    "interval": 3,
+    "reps": 2,
+    "lapses": 1,
+    "due": "2026-11-18",
+    "last": "2026-11-15"
+  },
+  "rust-0005#A": {
+    "ease": 2.3,
+    "interval": 3,
+    "reps": 2,
+    "lapses": 1,
+    "due": "2026-11-18",
+    "last": "2026-11-15"
+  },
+  "rust-0006#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0007#A": {
+    "ease": 2.35,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0008#A": {
+    "ease": 2.35,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0009#A": {
+    "ease": 2.35,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "rust-0010#A": {
+    "ease": 2.35,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
   }
 }
