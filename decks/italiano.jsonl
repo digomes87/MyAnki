@@ -1,3 +1,3 @@
-{"id":"italiano-0001","front":"ciao","back":"oi / tchau (informal)","tags":["saudacoes"],"reverse":true,"note":"seed inicial"}
-{"id":"italiano-0002","front":"buongiorno","back":"bom dia — cumprimento seguro em qualquer contexto, até o fim da tarde","tags":["saudacoes"],"reverse":true,"note":"seed inicial"}
-{"id":"italiano-0003","front":"come stai?","back":"como você está? (informal — formal: come sta?)","tags":["saudacoes","verbos"],"reverse":true,"note":"seed inicial"}
+{"id":"italiano-0001","front":"ciao","back":"oi / tchau (informal)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id":"italiano-0002","front":"buongiorno","back":"bom dia\n(seguro em qualquer contexto, até o fim da tarde)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id":"italiano-0003","front":"come stai?","back":"como você está? (informal)\n(formal: come sta?)","tags":["saudacoes","verbos"],"reverse":true,"typed":true,"note":"seed inicial"}

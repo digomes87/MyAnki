@@ -1,3 +1,3 @@
-{"id":"alemao-0001","front":"hallo","back":"oi (informal)","tags":["saudacoes"],"reverse":true,"note":"seed inicial"}
-{"id":"alemao-0002","front":"danke","back":"obrigado (reforçado: danke schön)","tags":["cortesia"],"reverse":true,"note":"seed inicial"}
-{"id":"alemao-0003","front":"wie geht's?","back":"como vai? (informal; forma completa: wie geht es dir?)","tags":["saudacoes"],"reverse":true,"note":"seed inicial"}
+{"id":"alemao-0001","front":"hallo","back":"oi (informal)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id":"alemao-0002","front":"danke","back":"obrigado\n(danke schön = muito obrigado)","tags":["cortesia"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id":"alemao-0003","front":"wie geht's?","back":"como vai? (informal)\n(forma completa: wie geht es dir?)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}

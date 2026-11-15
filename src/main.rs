@@ -1,3 +1,4 @@
+mod answer;
 mod card;
 mod srs;
 mod state;
@@ -77,6 +78,13 @@ struct Item {
 }
 
 impl Item {
+    /// Cards marcados como `typed` pedem resposta digitada.
+    /// Em cards reversos, só a direção B (produção: pt → língua);
+    /// a direção A (reconhecimento) tem sinônimos demais e fica auto-avaliada.
+    fn wants_typing(&self) -> bool {
+        self.card.typed && (!self.card.reverse || self.flipped)
+    }
+
     fn front(&self) -> &str {
         if self.flipped {
             &self.card.back
@@ -205,18 +213,63 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
             direction,
             tags
         );
-        println!("{}", ui::bold(it.front()));
-        ui::out(&format!("\n{} ", ui::dim("⏎ revelar (Enter)")));
-        match ui::read_line() {
-            Ok(Some(_)) => {}
-            _ => {
-                interrupted = true;
-                break;
+        // cards `typed`: o prompt é só a 1ª linha do lado visível;
+        // as linhas restantes viram referência mostrada depois da resposta
+        let shown_lines: Vec<&str> = it.front().lines().collect();
+        let (prompt, reference): (&str, &[&str]) = if it.wants_typing() && shown_lines.len() > 1 {
+            (shown_lines[0], &shown_lines[1..])
+        } else {
+            (it.front(), &[])
+        };
+        println!("{}", ui::bold(prompt));
+
+        let can_type = it.wants_typing() && it.back().lines().count() == 1;
+        if can_type {
+            ui::out(&format!("\n{} ", ui::cyan("Resposta:")));
+            match ui::read_line() {
+                Ok(Some(input)) => match answer::compare(it.back(), &input) {
+                    answer::Match::Exact => {
+                        println!("\n  {} {}", ui::green("✓ exato:"), it.back())
+                    }
+                    answer::Match::Close => println!(
+                        "\n  {} {} · {} {}",
+                        ui::yellow("≈ quase (typo?)"),
+                        input,
+                        ui::dim("esperado:"),
+                        it.back()
+                    ),
+                    answer::Match::Wrong => println!(
+                        "\n  {} {} · {} {}",
+                        ui::red("✗ você digitou:"),
+                        input,
+                        ui::dim("esperado:"),
+                        it.back()
+                    ),
+                    answer::Match::Blank => {
+                        println!("\n  {} {}", ui::red("✗ sem resposta · esperado:"), it.back())
+                    }
+                },
+                _ => {
+                    interrupted = true;
+                    break;
+                }
             }
-        }
-        println!();
-        for line in it.back().lines() {
-            println!("  {} {}", ui::green("│"), line);
+            for line in reference {
+                println!("  {} {}", ui::dim("ℹ"), line);
+            }
+        } else {
+            ui::out(&format!("\n{} ", ui::dim("⏎ revelar (Enter)")));
+            match ui::read_line() {
+                Ok(Some(_)) => {}
+                _ => {
+                    interrupted = true;
+                    break;
+                }
+            }
+            println!();
+            for line in it.back().lines() {
+                println!("  {} {}", ui::green("│"), line);
+            }
         }
 
         let Some(grade) = read_grade() else {
@@ -285,8 +338,19 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
     Ok(())
 }
 
-fn grade_label(g: Grade) -> &'static str {
-    match g {
+/// Pergunta sim/não no terminal (vazio = não).
+fn ask_yes(prompt: &str) -> Result<bool, String> {
+    ui::out(&format!("{} ", ui::cyan(prompt)));
+    Ok(matches!(
+        ui::read_line()
+            .map_err(|e| e.to_string())?
+            .unwrap_or_default()
+            .trim(),
+        "s" | "S" | "sim" | "Sim"
+    ))
+}
+
+fn grade_label(g: Grade) -> &'static str {    match g {
         Grade::Again => "Errei",
         Grade::Hard => "Difícil",
         Grade::Good => "Bom",
@@ -358,17 +422,8 @@ fn run_add(root: &Path, deck_name: &str) -> Result<(), String> {
         .filter(|t| !t.is_empty())
         .collect();
 
-    ui::out(&format!(
-        "{} ",
-        ui::cyan("Reverso? treina as duas direções [s/N]:")
-    ));
-    let reverse = matches!(
-        ui::read_line()
-            .map_err(|e| e.to_string())?
-            .unwrap_or_default()
-            .trim(),
-        "s" | "S" | "sim" | "Sim"
-    );
+    let reverse = ask_yes("Reverso? treina as duas direções [s/N]:")?;
+    let typed = ask_yes("Digitável? resposta curta e exata — você digita e eu comparo [s/N]:")?;
 
     let id = card::next_id(&deck, &existing);
     let new_card = Card {
@@ -377,6 +432,7 @@ fn run_add(root: &Path, deck_name: &str) -> Result<(), String> {
         back,
         tags,
         reverse,
+        typed,
         note: None,
     };
     card::append_card(root, &deck, &new_card).map_err(|e| e.to_string())?;

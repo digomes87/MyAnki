@@ -17,6 +17,10 @@ pub struct Card {
     /// Vocabulário: gera também a direção verso→frente (`id#B`).
     #[serde(default, skip_serializing_if = "is_false")]
     pub reverse: bool,
+    /// Resposta curta e exata: o usuário digita e o programa compara.
+    /// Em cards reversos, aplica-se à direção B (produção).
+    #[serde(default, skip_serializing_if = "is_false")]
+    pub typed: bool,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub note: Option<String>,
 }
