@@ -1,0 +1,26 @@
+{
+  "alemao-0001#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "alemao-0001#B": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  },
+  "alemao-0002#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-16",
+    "last": "2026-11-15"
+  }
+}

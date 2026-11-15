@@ -1,0 +1,489 @@
+mod card;
+mod srs;
+mod state;
+mod ui;
+
+use card::Card;
+use chrono::Local;
+use clap::{Parser, Subcommand};
+use srs::Grade;
+use state::{HistoryEntry, Store};
+use std::collections::HashSet;
+use std::path::Path;
+use std::process::ExitCode;
+use std::time::Instant;
+
+#[derive(Parser)]
+#[command(
+    name = "anki",
+    version,
+    about = "Repetição espaçada no terminal — cards curados pelo agente, revisão por sua conta"
+)]
+struct Cli {
+    #[command(subcommand)]
+    command: Option<Command>,
+}
+
+#[derive(Subcommand)]
+enum Command {
+    /// Sessão de revisão (comando padrão)
+    Review {
+        /// Decks a revisar (padrão: todos)
+        decks: Vec<String>,
+        /// Máximo de cards novos por dia
+        #[arg(long, default_value_t = 10)]
+        new: u32,
+    },
+    /// Adiciona um card a um deck (interativo)
+    Add { deck: String },
+    /// Mostra vencidos e novos por deck
+    Due,
+    /// Estatísticas de progresso
+    Stats,
+    /// Lista os cards de um deck (ou de todos)
+    List { deck: Option<String> },
+}
+
+fn main() -> ExitCode {
+    let cli = Cli::parse();
+    let command = cli.command.unwrap_or(Command::Review {
+        decks: Vec::new(),
+        new: 10,
+    });
+    let root = card::find_root();
+    let result = match command {
+        Command::Review { decks, new } => run_review(&root, &decks, new),
+        Command::Add { deck } => run_add(&root, &deck),
+        Command::Due => run_overview(&root, true),
+        Command::Stats => run_stats(&root),
+        Command::List { deck } => run_list(&root, deck.as_deref()),
+    };
+    match result {
+        Ok(()) => ExitCode::SUCCESS,
+        Err(msg) => {
+            eprintln!("{} {msg}", ui::red("erro:"));
+            ExitCode::FAILURE
+        }
+    }
+}
+
+/// Um item agendável: um card, ou uma das duas direções de um card reverso.
+#[derive(Clone)]
+struct Item {
+    key: String,
+    deck: String,
+    card: Card,
+    flipped: bool,
+}
+
+impl Item {
+    fn front(&self) -> &str {
+        if self.flipped {
+            &self.card.back
+        } else {
+            &self.card.front
+        }
+    }
+    fn back(&self) -> &str {
+        if self.flipped {
+            &self.card.front
+        } else {
+            &self.card.back
+        }
+    }
+}
+
+fn build_items(decks: &[(String, Vec<Card>)]) -> Vec<Item> {
+    let mut items = Vec::new();
+    for (deck, cards) in decks {
+        for c in cards {
+            items.push(Item {
+                key: format!("{}#A", c.id),
+                deck: deck.clone(),
+                card: c.clone(),
+                flipped: false,
+            });
+            if c.reverse {
+                items.push(Item {
+                    key: format!("{}#B", c.id),
+                    deck: deck.clone(),
+                    card: c.clone(),
+                    flipped: true,
+                });
+            }
+        }
+    }
+    items
+}
+
+fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(), String> {
+    let decks = card::load_decks(root, deck_filter)?;
+    let items = build_items(&decks);
+    let mut store = Store::load(root);
+    let today = Local::now().date_naive();
+
+    // vencidos: têm estado e a data de revisão chegou
+    let mut due: Vec<&Item> = items
+        .iter()
+        .filter(|it| {
+            store
+                .schedule
+                .get(&it.key)
+                .is_some_and(|s| s.due <= today)
+        })
+        .collect();
+    due.sort_by(|a, b| {
+        let da = store.schedule[&a.key].due;
+        let db = store.schedule[&b.key].due;
+        da.cmp(&db).then_with(|| a.key.cmp(&b.key))
+    });
+
+    // novos: sem estado; respeitando o limite diário (contando o que já estreou hoje)
+    let introduced_today = items
+        .iter()
+        .filter(|it| {
+            store
+                .schedule
+                .get(&it.key)
+                .is_some_and(|s| s.reps == 1 && s.last == Some(today))
+        })
+        .count() as u32;
+    let new_slots = new_per_day.saturating_sub(introduced_today) as usize;
+    let fresh: Vec<&Item> = items
+        .iter()
+        .filter(|it| !store.schedule.contains_key(&it.key))
+        .take(new_slots)
+        .collect();
+
+    let due_count = due.len();
+    let fresh_count = fresh.len();
+    let mut queue: Vec<Item> = due.into_iter().chain(fresh).cloned().collect();
+    if queue.is_empty() {
+        println!(
+            "{}",
+            ui::green("Nada pra revisar hoje ✓ volte amanhã (ou --new N para forçar novos)")
+        );
+        return Ok(());
+    }
+
+    let deck_list = decks
+        .iter()
+        .map(|(name, _)| name.as_str())
+        .collect::<Vec<_>>()
+        .join(", ");
+    println!("{}", ui::bold(&format!("━━━ anki · {deck_list} ━━━")));
+    println!(
+        "{} · {}\n",
+        ui::cyan(&format!("{due_count} vencidos")),
+        ui::cyan(&format!("{fresh_count} novos"))
+    );
+
+    let start = Instant::now();
+    let mut answered = 0usize;
+    let mut errors = 0usize;
+    let mut requeued: HashSet<String> = HashSet::new();
+    let mut interrupted = false;
+
+    while !queue.is_empty() {
+        let total = answered + queue.len();
+        let it = queue.remove(0);
+
+        let tags = if it.card.tags.is_empty() {
+            String::new()
+        } else {
+            format!(" {}", ui::dim(&format!("· {}", it.card.tags.join(", "))))
+        };
+        let direction = if it.flipped {
+            format!(" {}", ui::dim("⇄ inverso"))
+        } else {
+            String::new()
+        };
+        println!(
+            "{} {}{}{}",
+            ui::dim(&format!("[{}/{}]", answered + 1, total)),
+            ui::cyan(&it.deck),
+            direction,
+            tags
+        );
+        println!("{}", ui::bold(it.front()));
+        ui::out(&format!("\n{} ", ui::dim("⏎ revelar (Enter)")));
+        match ui::read_line() {
+            Ok(Some(_)) => {}
+            _ => {
+                interrupted = true;
+                break;
+            }
+        }
+        println!();
+        for line in it.back().lines() {
+            println!("  {} {}", ui::green("│"), line);
+        }
+
+        let Some(grade) = read_grade() else {
+            interrupted = true;
+            break;
+        };
+
+        // aplica o agendamento e salva NA HORA: Ctrl-C não perde progresso
+        let entry = store
+            .schedule
+            .entry(it.key.clone())
+            .or_insert_with(|| srs::new_state(today));
+        srs::apply(entry, grade, today);
+        let interval = entry.interval;
+        let due_date = entry.due;
+        store
+            .save()
+            .map_err(|e| format!("salvando state/schedule.json: {e}"))?;
+        store
+            .append_history(&HistoryEntry {
+                date: today,
+                deck: it.deck.clone(),
+                id: it.key.clone(),
+                grade: grade as u8,
+            })
+            .map_err(|e| format!("salvando state/history.jsonl: {e}"))?;
+
+        answered += 1;
+        if grade == Grade::Again {
+            errors += 1;
+            println!(
+                "  {} {}",
+                ui::red("✗ Errei"),
+                ui::dim("volta no fim da sessão · próxima em 1d")
+            );
+            if requeued.insert(it.key.clone()) {
+                queue.push(it);
+            }
+        } else {
+            println!(
+                "  {} {}",
+                ui::green(format!("✓ {}", grade_label(grade)).as_str()),
+                ui::dim(&format!("próxima em {interval}d ({})", due_date.format("%d/%m")))
+            );
+        }
+        println!();
+    }
+
+    if interrupted {
+        println!("{}", ui::yellow("— sessão interrompida, progresso salvo —"));
+    }
+    let acc = if answered > 0 {
+        (answered - errors) * 100 / answered
+    } else {
+        0
+    };
+    let hist = store.history();
+    let streak_days = state::streak(&hist, today);
+    println!("{}", ui::bold("━━━ sessão concluída ━━━"));
+    println!(
+        "{answered} cards · {errors} erros · {acc}% de acerto · {}s · streak {} {}",
+        start.elapsed().as_secs(),
+        streak_days,
+        if streak_days == 1 { "dia" } else { "dias" }
+    );
+    Ok(())
+}
+
+fn grade_label(g: Grade) -> &'static str {
+    match g {
+        Grade::Again => "Errei",
+        Grade::Hard => "Difícil",
+        Grade::Good => "Bom",
+        Grade::Easy => "Fácil",
+    }
+}
+
+/// Lê a nota no prompt `1–4` (Enter = Bom). `None` em EOF.
+fn read_grade() -> Option<Grade> {
+    loop {
+        ui::out(&format!(
+            "\n  {}  {}  {}  {}  {} ",
+            ui::red("1 ✗ Errei"),
+            ui::yellow("2 ▲ Difícil"),
+            ui::green("3 ✓ Bom"),
+            ui::cyan("4 ★ Fácil"),
+            ui::dim("(Enter = Bom)")
+        ));
+        match ui::read_line() {
+            Ok(Some(s)) if s.trim().is_empty() => return Some(Grade::Good),
+            Ok(Some(s)) => match Grade::from_input(&s) {
+                Some(g) => return Some(g),
+                None => println!("{}", ui::dim("  digite 1–4 (ou Enter = Bom)")),
+            },
+            _ => return None,
+        }
+    }
+}
+
+fn run_add(root: &Path, deck_name: &str) -> Result<(), String> {
+    let deck = card::sanitize_deck_name(deck_name);
+    let is_new = !card::decks_dir(root).join(format!("{deck}.jsonl")).exists();
+    let existing = card::load_deck(root, &deck).unwrap_or_default();
+
+    println!("{}", ui::bold(&format!("novo card → {deck}")));
+    ui::out(&format!("{} ", ui::cyan("Frente:")));
+    let front = ui::read_line()
+        .map_err(|e| e.to_string())?
+        .unwrap_or_default();
+    if front.trim().is_empty() {
+        return Err("frente vazia — nada adicionado".into());
+    }
+
+    ui::out(&format!(
+        "{} {}\n",
+        ui::cyan("Verso:"),
+        ui::dim("(termine com uma linha vazia)")
+    ));
+    let mut back_lines = Vec::new();
+    loop {
+        ui::out("  ");
+        match ui::read_line().map_err(|e| e.to_string())? {
+            Some(line) if line.trim().is_empty() => break,
+            Some(line) => back_lines.push(line),
+            None => break,
+        }
+    }
+    let back = back_lines.join("\n");
+    if back.trim().is_empty() {
+        return Err("verso vazio — nada adicionado".into());
+    }
+
+    ui::out(&format!("{} ", ui::cyan("Tags (vírgula):")));
+    let tags: Vec<String> = ui::read_line()
+        .map_err(|e| e.to_string())?
+        .unwrap_or_default()
+        .split(',')
+        .map(|t| t.trim().to_owned())
+        .filter(|t| !t.is_empty())
+        .collect();
+
+    ui::out(&format!(
+        "{} ",
+        ui::cyan("Reverso? treina as duas direções [s/N]:")
+    ));
+    let reverse = matches!(
+        ui::read_line()
+            .map_err(|e| e.to_string())?
+            .unwrap_or_default()
+            .trim(),
+        "s" | "S" | "sim" | "Sim"
+    );
+
+    let id = card::next_id(&deck, &existing);
+    let new_card = Card {
+        id: id.clone(),
+        front,
+        back,
+        tags,
+        reverse,
+        note: None,
+    };
+    card::append_card(root, &deck, &new_card).map_err(|e| e.to_string())?;
+    let extra = if is_new {
+        ui::dim(" (novo deck criado)")
+    } else {
+        String::new()
+    };
+    println!("{} {}{}", ui::green("✓ adicionado"), ui::bold(&id), extra);
+    Ok(())
+}
+
+/// Tabela vencidos/novos por deck — compartilhada entre `due` e `stats`.
+fn run_overview(root: &Path, with_hint: bool) -> Result<(), String> {
+    let today = Local::now().date_naive();
+    let store = Store::load(root);
+    let names = card::deck_names(root);
+    if names.is_empty() {
+        println!(
+            "{}",
+            ui::dim(&format!(
+                "nenhum deck em {} — o agente deve criar decks/*.jsonl",
+                card::decks_dir(root).display()
+            ))
+        );
+        return Ok(());
+    }
+    println!(
+        "{:<12} {:>6} {:>9} {:>6}",
+        "deck", "cards", "vencidos", "novos"
+    );
+    let (mut t_cards, mut t_due, mut t_new) = (0usize, 0usize, 0usize);
+    for name in &names {
+        let cards = card::load_deck(root, name)?;
+        let keys: Vec<String> = cards.iter().flat_map(card::keys_for).collect();
+        let d = keys
+            .iter()
+            .filter(|k| store.schedule.get(k.as_str()).is_some_and(|s| s.due <= today))
+            .count();
+        let n = keys
+            .iter()
+            .filter(|k| !store.schedule.contains_key(k.as_str()))
+            .count();
+        t_cards += keys.len();
+        t_due += d;
+        t_new += n;
+        println!("{:<12} {:>6} {:>9} {:>6}", name, keys.len(), d, n);
+    }
+    println!();
+    if with_hint && t_due + t_new > 0 {
+        println!("{}", ui::dim("→ ./anki.sh para revisar"));
+    } else {
+        println!(
+            "{}",
+            ui::dim(&format!(
+                "total: {t_cards} cards · {t_due} vencidos · {t_new} novos"
+            ))
+        );
+    }
+    Ok(())
+}
+
+fn run_stats(root: &Path) -> Result<(), String> {
+    run_overview(root, false)?;
+    let store = Store::load(root);
+    let hist = store.history();
+    let today = Local::now().date_naive();
+    if hist.is_empty() {
+        println!("{}", ui::dim("sem histórico ainda — faça sua primeira sessão"));
+        return Ok(());
+    }
+    let today_count = hist.iter().filter(|e| e.date == today).count();
+    let streak_days = state::streak(&hist, today);
+    let ret = state::retention(&hist, 30, today)
+        .map(|r| format!("{}%", (r * 100.0).round() as u32))
+        .unwrap_or_else(|| "—".into());
+    println!(
+        "hoje: {} revisões · streak: {} {} · retenção 30d: {ret}",
+        today_count,
+        streak_days,
+        if streak_days == 1 { "dia" } else { "dias" }
+    );
+    Ok(())
+}
+
+fn run_list(root: &Path, deck: Option<&str>) -> Result<(), String> {
+    let names: Vec<String> = match deck {
+        Some(d) => vec![card::sanitize_deck_name(d)],
+        None => card::deck_names(root),
+    };
+    for name in names {
+        let cards = card::load_deck(root, &name)?;
+        println!(
+            "{} {}",
+            ui::cyan(&name),
+            ui::dim(&format!("({} cards)", cards.len()))
+        );
+        for c in &cards {
+            let rev = if c.reverse { ui::dim(" ⇄") } else { String::new() };
+            let tags = if c.tags.is_empty() {
+                String::new()
+            } else {
+                ui::dim(&format!("  #{}", c.tags.join(" #")))
+            };
+            let front: String = c.front.chars().take(64).collect();
+            println!("  {} {}{}{}", ui::dim(&c.id), front, rev, tags);
+        }
+    }
+    Ok(())
+}
