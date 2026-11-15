@@ -38,3 +38,36 @@
 {"id":"italiano-0038","front":"madre","back":"mãe","tags":["familia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
 {"id":"italiano-0039","front":"padre","back":"pai","tags":["familia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
 {"id":"italiano-0040","front":"cores: vermelho · verde · branco · preto","back":"rosso · verde · bianco · nero","tags":["cores"],"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0041","front":"fai attenzione","back":"cuidado / atenção","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0042","front":"cosa succede?","back":"o que está acontecendo?","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0043","front":"qual è il problema?","back":"qual é o problema?","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0044","front":"non ti preoccupare","back":"não se preocupe\n(formal: non si preoccupi)","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0045","front":"penso di sì","back":"eu acho que sim","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0046","front":"penso di no","back":"eu acho que não","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0047","front":"spero di sì","back":"espero que sim","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0048","front":"davvero?","back":"sério?","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0049","front":"dici sul serio?","back":"você está falando sério?","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0050","front":"stai scherzando?","back":"você está brincando?","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0051","front":"figurati","back":"imagina! / que isso!\n(resposta a agradecimento; formal: si figuri)","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula — corrigido: não é 'não fale isso'"}
+{"id":"italiano-0052","front":"nessun problema","back":"sem problemas","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0053","front":"volentieri","back":"com prazer","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0054","front":"dipende","back":"depende","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0055","front":"andiamo","back":"vamos lá","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0056","front":"forza","back":"força! / vamos!\n(ânimo, torcida)","tags":["expressoes"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0057","front":"vorrei prenotare un tavolo","back":"gostaria de reservar uma mesa","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0058","front":"un tavolo per due, per favore","back":"uma mesa para dois, por favor","tags":["restaurante"],"reverse":true,"note":"anotações de aula"}
+{"id":"italiano-0059","front":"posso vedere il menù?","back":"posso ver o menu?","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0060","front":"cosa ci consiglia?","back":"o que você recomenda? (formal)\n(ci = nos: 'o que você nos recomenda?')","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula — corrigido: cosi → cosa"}
+{"id":"italiano-0061","front":"qual è il piatto del giorno?","back":"qual é o prato do dia?","tags":["restaurante"],"reverse":true,"note":"anotações de aula"}
+{"id":"italiano-0062","front":"vorrei ordinare","back":"gostaria de fazer o pedido","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0063","front":"prendo...","back":"eu vou de... / eu pego (para pedir)","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0064","front":"da bere?","back":"algo para beber?","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0065","front":"acqua naturale","back":"água sem gás","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0066","front":"acqua frizzante","back":"água com gás","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0067","front":"un bicchiere di vino rosso","back":"um copo de vinho tinto","tags":["restaurante"],"reverse":true,"note":"anotações de aula — corrigido: vermelho → tinto"}
+{"id":"italiano-0068","front":"un bicchiere di vino bianco","back":"um copo de vinho branco","tags":["restaurante"],"reverse":true,"note":"anotações de aula"}
+{"id":"italiano-0069","front":"una birra alla spina","back":"um chopp","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0070","front":"il conto, per favore","back":"a conta, por favor","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0071","front":"possiamo pagare separatamente?","back":"podemos pagar separadamente?","tags":["restaurante"],"reverse":true,"typed":true,"note":"anotações de aula"}
+{"id":"italiano-0072","front":"posso pagare con la carta?","back":"posso pagar com cartão?","tags":["restaurante"],"reverse":true,"note":"anotações de aula"}
+{"id":"italiano-0073","front":"Marta è la ragazza di cui ti parlavo ieri","back":"Marta é a moça sobre quem eu te falava ontem.\n(di cui = pronome relativo com preposição: 'sobre a qual / de quem' —\nusado quando o verbo pede 'di', como em parlare DI qualcuno)","tags":["gramatica"],"reverse":true,"note":"anotações de aula"}
