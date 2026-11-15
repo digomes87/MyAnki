@@ -483,7 +483,7 @@ fn run_overview(root: &Path, with_hint: bool) -> Result<(), String> {
     }
     println!();
     if with_hint && t_due + t_new > 0 {
-        println!("{}", ui::dim("→ ./anki.sh para revisar"));
+        println!("{}", ui::dim("→ rode `anki` (ou ./anki.sh) para revisar"));
     } else {
         println!(
             "{}",

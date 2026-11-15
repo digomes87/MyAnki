@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # anki.sh — compila se necessário e roda a sessão de revisão
-# uso: ./anki.sh [review decks...] [--new N] | add <deck> | due | stats | list
+# uso: anki [review decks...] [--new N] | add <deck> | due | stats | list
+# funciona de qualquer diretório e via symlink (ex.: ~/.local/bin/anki)
 set -euo pipefail
-cd "$(dirname "$0")"
+SELF="$(readlink -f "$0" 2>/dev/null || echo "$0")"
+cd "$(dirname "$SELF")"
 
 BIN="target/release/anki"
 
