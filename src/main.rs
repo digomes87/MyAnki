@@ -41,6 +41,11 @@ enum Command {
     Due,
     /// Estatísticas de progresso
     Stats,
+    /// Estudo livre: embaralha e repete à vontade, sem alterar o agendamento
+    Study {
+        /// Decks (padrão: todos)
+        decks: Vec<String>,
+    },
     /// Lista os cards de um deck (ou de todos)
     List { deck: Option<String> },
 }
@@ -57,6 +62,7 @@ fn main() -> ExitCode {
         Command::Add { deck } => run_add(&root, &deck),
         Command::Due => run_overview(&root, true),
         Command::Stats => run_stats(&root),
+        Command::Study { decks } => run_study(&root, &decks),
         Command::List { deck } => run_list(&root, deck.as_deref()),
     };
     match result {
@@ -99,6 +105,75 @@ impl Item {
             &self.card.back
         }
     }
+}
+
+/// Mostra a frente do item, coleta a resposta (digitada ou revelada)
+/// e lê a nota 1–4. `allow_quit`: no modo livre, "q" encerra a sessão.
+/// Retorna `None` em EOF/quit.
+fn present_item(it: &Item, allow_quit: bool) -> Option<Grade> {
+    // cards `typed`: o prompt é só a 1ª linha do lado visível;
+    // as linhas restantes viram referência mostrada depois da resposta
+    let shown_lines: Vec<&str> = it.front().lines().collect();
+    let (prompt, reference): (&str, &[&str]) = if it.wants_typing() && shown_lines.len() > 1 {
+        (shown_lines[0], &shown_lines[1..])
+    } else {
+        (it.front(), &[])
+    };
+    println!("{}", ui::bold(prompt));
+
+    let can_type = it.wants_typing() && it.back().lines().count() == 1;
+    if can_type {
+        ui::out(&format!("\n{} ", ui::cyan("Resposta:")));
+        match ui::read_line() {
+            Ok(Some(input)) => {
+                if allow_quit && input.trim().eq_ignore_ascii_case("q") {
+                    return None;
+                }
+                match answer::compare(it.back(), &input) {
+                    answer::Match::Exact => {
+                        println!("\n  {} {}", ui::green("✓ exato:"), it.back())
+                    }
+                    answer::Match::Close => println!(
+                        "\n  {} {} · {} {}",
+                        ui::yellow("≈ quase (typo?)"),
+                        input,
+                        ui::dim("esperado:"),
+                        it.back()
+                    ),
+                    answer::Match::Wrong => println!(
+                        "\n  {} {} · {} {}",
+                        ui::red("✗ você digitou:"),
+                        input,
+                        ui::dim("esperado:"),
+                        it.back()
+                    ),
+                    answer::Match::Blank => {
+                        println!("\n  {} {}", ui::red("✗ sem resposta · esperado:"), it.back())
+                    }
+                }
+            }
+            _ => return None,
+        }
+        for line in reference {
+            println!("  {} {}", ui::dim("ℹ"), line);
+        }
+    } else {
+        let hint = if allow_quit { "(Enter · q sai)" } else { "(Enter)" };
+        ui::out(&format!("\n{} ", ui::dim(&format!("⏎ revelar {hint}"))));
+        match ui::read_line() {
+            Ok(Some(input)) => {
+                if allow_quit && input.trim().eq_ignore_ascii_case("q") {
+                    return None;
+                }
+            }
+            _ => return None,
+        }
+        println!();
+        for line in it.back().lines() {
+            println!("  {} {}", ui::green("│"), line);
+        }
+    }
+    read_grade()
 }
 
 fn build_items(decks: &[(String, Vec<Card>)]) -> Vec<Item> {
@@ -175,10 +250,18 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
                 "  {} ou volte amanhã (os de hoje voltam como vencidos)",
                 ui::cyan(&format!("→ use --new {} para estrear mais agora", introduced_today + 1))
             );
+            println!(
+                "  {}",
+                ui::dim("→ `anki study` para reforço livre sem estrear novos")
+            );
         } else {
             println!(
                 "{}",
                 ui::green("Nada pra revisar hoje ✓ todos os cards estão agendados — volte amanhã")
+            );
+            println!(
+                "{}",
+                ui::dim("→ `anki study` para repetir à vontade sem mexer no agendamento")
             );
         }
         return Ok(());
@@ -223,66 +306,7 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
             direction,
             tags
         );
-        // cards `typed`: o prompt é só a 1ª linha do lado visível;
-        // as linhas restantes viram referência mostrada depois da resposta
-        let shown_lines: Vec<&str> = it.front().lines().collect();
-        let (prompt, reference): (&str, &[&str]) = if it.wants_typing() && shown_lines.len() > 1 {
-            (shown_lines[0], &shown_lines[1..])
-        } else {
-            (it.front(), &[])
-        };
-        println!("{}", ui::bold(prompt));
-
-        let can_type = it.wants_typing() && it.back().lines().count() == 1;
-        if can_type {
-            ui::out(&format!("\n{} ", ui::cyan("Resposta:")));
-            match ui::read_line() {
-                Ok(Some(input)) => match answer::compare(it.back(), &input) {
-                    answer::Match::Exact => {
-                        println!("\n  {} {}", ui::green("✓ exato:"), it.back())
-                    }
-                    answer::Match::Close => println!(
-                        "\n  {} {} · {} {}",
-                        ui::yellow("≈ quase (typo?)"),
-                        input,
-                        ui::dim("esperado:"),
-                        it.back()
-                    ),
-                    answer::Match::Wrong => println!(
-                        "\n  {} {} · {} {}",
-                        ui::red("✗ você digitou:"),
-                        input,
-                        ui::dim("esperado:"),
-                        it.back()
-                    ),
-                    answer::Match::Blank => {
-                        println!("\n  {} {}", ui::red("✗ sem resposta · esperado:"), it.back())
-                    }
-                },
-                _ => {
-                    interrupted = true;
-                    break;
-                }
-            }
-            for line in reference {
-                println!("  {} {}", ui::dim("ℹ"), line);
-            }
-        } else {
-            ui::out(&format!("\n{} ", ui::dim("⏎ revelar (Enter)")));
-            match ui::read_line() {
-                Ok(Some(_)) => {}
-                _ => {
-                    interrupted = true;
-                    break;
-                }
-            }
-            println!();
-            for line in it.back().lines() {
-                println!("  {} {}", ui::green("│"), line);
-            }
-        }
-
-        let Some(grade) = read_grade() else {
+        let Some(grade) = present_item(&it, false) else {
             interrupted = true;
             break;
         };
@@ -388,6 +412,90 @@ fn read_grade() -> Option<Grade> {
             _ => return None,
         }
     }
+}
+
+/// Modo livre: embaralha e repete à vontade — NADA é agendado ou registrado.
+/// É o reforço extra por conta do usuário; o ritual de agendamento continua
+/// sendo o `review`.
+fn run_study(root: &Path, deck_filter: &[String]) -> Result<(), String> {
+    use rand::seq::SliceRandom;
+
+    let decks = card::load_decks(root, deck_filter)?;
+    let items = build_items(&decks);
+    if items.is_empty() {
+        return Err("deck(s) sem cards".into());
+    }
+    let mut rng = rand::rng();
+    let mut order: Vec<usize> = (0..items.len()).collect();
+    order.shuffle(&mut rng);
+    let mut pos = 0usize;
+    let mut count = 0usize;
+    let mut errors = 0usize;
+    let start = Instant::now();
+    let deck_list = decks
+        .iter()
+        .map(|(name, _)| name.as_str())
+        .collect::<Vec<_>>()
+        .join(", ");
+
+    println!(
+        "{}",
+        ui::bold(&format!("━━━ anki · estudo livre · {deck_list} ━━━"))
+    );
+    println!(
+        "{}\n",
+        ui::dim("repetição sem agenda: não mexe em vencimentos nem histórico — digite q para sair")
+    );
+
+    loop {
+        if pos == order.len() {
+            order.shuffle(&mut rng); // nova passada, nova ordem
+            pos = 0;
+        }
+        let it = &items[order[pos]];
+        pos += 1;
+
+        let tags = if it.card.tags.is_empty() {
+            String::new()
+        } else {
+            format!(" {}", ui::dim(&format!("· {}", it.card.tags.join(", "))))
+        };
+        let direction = if it.flipped {
+            format!(" {}", ui::dim("⇄ inverso"))
+        } else {
+            String::new()
+        };
+        println!(
+            "{} {}{}{}",
+            ui::dim(&format!("〔·〕")),
+            ui::cyan(&it.deck),
+            direction,
+            tags
+        );
+
+        let Some(grade) = present_item(it, true) else {
+            break;
+        };
+        count += 1;
+        if grade == Grade::Again {
+            errors += 1;
+            println!("  {}\n", ui::red("✗ anote o erro e siga"));
+        } else {
+            println!("  {}\n", ui::green(format!("✓ {}", grade_label(grade)).as_str()));
+        }
+    }
+
+    let acc = if count > 0 {
+        (count - errors) * 100 / count
+    } else {
+        0
+    };
+    println!("{}", ui::bold("━━━ estudo livre concluído ━━━"));
+    println!(
+        "{count} revisões · {errors} erros · {acc}% de acerto · {}s",
+        start.elapsed().as_secs()
+    );
+    Ok(())
 }
 
 fn run_add(root: &Path, deck_name: &str) -> Result<(), String> {
