@@ -1,3 +1,40 @@
 {"id":"italiano-0001","front":"ciao","back":"oi / tchau (informal)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
 {"id":"italiano-0002","front":"buongiorno","back":"bom dia\n(seguro em qualquer contexto, até o fim da tarde)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
 {"id":"italiano-0003","front":"come stai?","back":"como você está? (informal)\n(formal: come sta?)","tags":["saudacoes","verbos"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id":"italiano-0004","front":"buonanotte","back":"boa noite (na hora de dormir)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0005","front":"arrivederci","back":"até logo / tchau (neutro-formal)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0006","front":"a presto","back":"até breve","tags":["saudacoes"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0007","front":"per favore","back":"por favor","tags":["cortesia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0008","front":"prego","back":"de nada / pois não","tags":["cortesia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0009","front":"scusa","back":"desculpa\n(scusi = forma formal)","tags":["cortesia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0010","front":"piacere","back":"prazer em conhecer\n(usado ao ser apresentado)","tags":["saudacoes"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0011","front":"mi chiamo...","back":"meu nome é...","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0012","front":"quanto costa?","back":"quanto custa?","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0013","front":"dov'è il bagno?","back":"onde fica o banheiro?","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0014","front":"non capisco","back":"não entendo","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0015","front":"parli inglese?","back":"você fala inglês? (informal)\n(formal: parla inglese?)","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0016","front":"sto bene","back":"estou bem\n(resposta a come stai?)","tags":["frases"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0017","front":"Conjugar ser/estar (ESSERE) no presente","back":"io sono · tu sei · lui/lei è\nnoi siamo · voi siete · loro sono","tags":["verbos","gramatica"],"note":"bloco A1-1"}
+{"id":"italiano-0018","front":"Conjugar ter (AVERE) no presente","back":"io ho · tu hai · lui/lei ha\nnoi abbiamo · voi avete · loro hanno","tags":["verbos","gramatica"],"note":"bloco A1-1"}
+{"id":"italiano-0019","front":"Terminações dos verbos -ARE no presente (usar parlare como modelo)","back":"io parl-o · tu parl-i · lui/lei parl-a\nnoi parl-iamo · voi parl-ate · loro parl-ano","tags":["verbos","gramatica"],"note":"bloco A1-1"}
+{"id":"italiano-0020","front":"Artigos definidos masculinos: singular e plural, com exemplos","back":"il libro → i libri (consoante normal)\nlo studente → gli studenti (s-, z-, ps-, gn-)\nl'amico → gli amici (vogal)","tags":["gramatica","artigos"],"note":"bloco A1-1"}
+{"id":"italiano-0021","front":"Artigos definidos femininos: singular e plural, com exemplos","back":"la casa → le case\nl'amica → le amiche (vogal)","tags":["gramatica","artigos"],"note":"bloco A1-1"}
+{"id":"italiano-0022","front":"Plural regular: como terminam substantivos em -o, -a e -e?","back":"-o → -i (libro → libri)\n-a → -e (casa → case)\n-e → -i (ristorante → ristoranti)","tags":["gramatica","plural"],"note":"bloco A1-1"}
+{"id":"italiano-0023","front":"Digite os plurais de: libro · casa · ristorante","back":"libri · case · ristoranti","tags":["gramatica","plural"],"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0024","front":"Como se forma uma negação em italiano? (com exemplo)","back":"non + verbo: non parlo italiano.\nO non vem sempre antes do verbo (non capisco = não entendo).","tags":["gramatica"],"note":"bloco A1-1"}
+{"id":"italiano-0025","front":"tu ou Lei — quando usar cada?","back":"tu: informal (amigos, família, jovens)\nLei: formal, conjugado na 3ª pessoa (Lei parla inglese?)","tags":["gramatica","formalidade"],"note":"bloco A1-1"}
+{"id":"italiano-0026","front":"Palavras interrogativas: quem · o que · onde · quando · por quê · como · quanto","back":"chi · che cosa · dove · quando · perché · come · quanto","tags":["gramatica","perguntas"],"note":"bloco A1-1"}
+{"id":"italiano-0027","front":"Dias da semana, de segunda a domingo","back":"lunedì, martedì, mercoledì, giovedì,\nvenerdì, sabato, domenica","tags":["tempo"],"note":"bloco A1-1"}
+{"id":"italiano-0028","front":"um, dois, três, quatro, cinco","back":"uno, due, tre, quattro, cinque","tags":["numeros"],"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0029","front":"seis, sete, oito, nove, dez","back":"sei, sette, otto, nove, dieci","tags":["numeros"],"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0030","front":"mangiare","back":"comer","tags":["verbos"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0031","front":"bere","back":"beber","tags":["verbos"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0032","front":"andare","back":"ir","tags":["verbos"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0033","front":"fare","back":"fazer","tags":["verbos"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0034","front":"acqua","back":"água","tags":["comida"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0035","front":"pane","back":"pão","tags":["comida"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0036","front":"casa","back":"casa","tags":["lugares"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0037","front":"famiglia","back":"família","tags":["familia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0038","front":"madre","back":"mãe","tags":["familia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0039","front":"padre","back":"pai","tags":["familia"],"reverse":true,"typed":true,"note":"bloco A1-1"}
+{"id":"italiano-0040","front":"cores: vermelho · verde · branco · preto","back":"rosso · verde · bianco · nero","tags":["cores"],"typed":true,"note":"bloco A1-1"}
