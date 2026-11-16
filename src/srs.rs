@@ -7,19 +7,15 @@ pub const EASE_START: f32 = 2.5;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Grade {
-    Again = 1,
-    Hard = 2,
-    Good = 3,
-    Easy = 4,
+    Wrong = 1,
+    Correct = 2,
 }
 
 impl Grade {
     pub fn from_input(s: &str) -> Option<Grade> {
         match s.trim() {
-            "1" => Some(Grade::Again),
-            "2" => Some(Grade::Hard),
-            "3" => Some(Grade::Good),
-            "4" => Some(Grade::Easy),
+            "1" => Some(Grade::Wrong),
+            "2" => Some(Grade::Correct),
             _ => None,
         }
     }
@@ -58,27 +54,22 @@ fn ceil_days(x: f32) -> u32 {
     ((x - 1e-4).ceil() as u32).max(1)
 }
 
-/// Aplica uma revisão (SM-2 simplificado, estilo Anki) e agenda a próxima.
+/// Aplica uma revisão (SM-2 simplificado, binário: acertei/errei) e agenda a próxima.
+/// Erro desce o ease e reseta o intervalo; acerto progressão normal × ease.
 pub fn apply(s: &mut SrsState, grade: Grade, today: NaiveDate) {
     let ease = match grade {
-        Grade::Again => s.ease - 0.20,
-        Grade::Hard => s.ease - 0.15,
-        Grade::Good => s.ease,
-        Grade::Easy => s.ease + 0.15,
+        Grade::Wrong => s.ease - 0.20,
+        Grade::Correct => s.ease,
     };
     let ease = round2(ease).clamp(EASE_MIN, EASE_MAX);
 
     let interval = match grade {
-        Grade::Again => 1,
-        Grade::Hard if s.reps == 0 => 1,
-        Grade::Hard => ceil_days(s.interval as f32 * 1.2),
-        Grade::Good if s.reps == 0 => 1,
-        Grade::Good => ceil_days(s.interval as f32 * ease),
-        Grade::Easy if s.reps == 0 => 3,
-        Grade::Easy => ceil_days(s.interval as f32 * ease * 1.3),
+        Grade::Wrong => 1,
+        Grade::Correct if s.reps == 0 => 1,
+        Grade::Correct => ceil_days(s.interval as f32 * ease),
     };
 
-    if grade == Grade::Again {
+    if grade == Grade::Wrong {
         s.lapses += 1;
     }
     s.ease = ease;
@@ -110,9 +101,9 @@ mod tests {
     }
 
     #[test]
-    fn primeira_revisao_bom() {
+    fn primeira_revisao_acertada() {
         let mut s = new_state(today());
-        apply(&mut s, Grade::Good, today());
+        apply(&mut s, Grade::Correct, today());
         assert_eq!(s.interval, 1);
         assert_eq!(s.reps, 1);
         assert!((s.ease - 2.5).abs() < 1e-6);
@@ -120,20 +111,11 @@ mod tests {
     }
 
     #[test]
-    fn primeira_revisao_facil() {
+    fn progressao_acertos() {
         let mut s = new_state(today());
-        apply(&mut s, Grade::Easy, today());
-        assert_eq!(s.interval, 3);
-        assert_eq!(s.due, NaiveDate::from_ymd_opt(2026, 11, 18).unwrap());
-        assert!((s.ease - 2.65).abs() < 1e-6);
-    }
-
-    #[test]
-    fn progressao_bom() {
-        let mut s = new_state(today());
-        apply(&mut s, Grade::Good, today()); // 1
-        apply(&mut s, Grade::Good, today()); // 1 × 2.5 = 2.5 → 3
-        apply(&mut s, Grade::Good, today()); // 3 × 2.5 = 7.5 → 8
+        apply(&mut s, Grade::Correct, today()); // 1
+        apply(&mut s, Grade::Correct, today()); // 1 × 2.5 = 2.5 → 3
+        apply(&mut s, Grade::Correct, today()); // 3 × 2.5 = 7.5 → 8
         assert_eq!(s.interval, 8);
         assert_eq!(s.reps, 3);
     }
@@ -141,7 +123,7 @@ mod tests {
     #[test]
     fn errei_reseta_intervalo() {
         let mut s = state_with(2.5, 20, 5);
-        apply(&mut s, Grade::Again, today());
+        apply(&mut s, Grade::Wrong, today());
         assert_eq!(s.interval, 1);
         assert_eq!(s.lapses, 1);
         assert_eq!(s.reps, 6);
@@ -150,34 +132,27 @@ mod tests {
     }
 
     #[test]
-    fn dificil_e_facil_ajustam() {
+    fn erro_encurta_proxima_progressao() {
+        // após 1 erro (ease 2.3), a progressão de acertos fica mais lenta
         let mut s = state_with(2.5, 10, 4);
-        apply(&mut s, Grade::Hard, today());
-        assert_eq!(s.interval, 12); // 10 × 1.2
-        assert!((s.ease - 2.35).abs() < 1e-6);
-
-        let mut s = state_with(2.5, 10, 4);
-        apply(&mut s, Grade::Easy, today());
-        assert_eq!(s.interval, 35); // 10 × 2.65 × 1.3 = 34.45 → 35
-        assert!((s.ease - 2.65).abs() < 1e-6);
+        apply(&mut s, Grade::Wrong, today());
+        apply(&mut s, Grade::Correct, today()); // 1 × 2.3 = 2.3 → 3
+        assert_eq!(s.interval, 3);
+        assert!((s.ease - 2.3).abs() < 1e-6);
     }
 
     #[test]
     fn ease_dentro_dos_limites() {
         let mut s = state_with(1.35, 5, 3);
-        apply(&mut s, Grade::Hard, today());
+        apply(&mut s, Grade::Wrong, today());
         assert!((s.ease - EASE_MIN).abs() < 1e-6);
-
-        let mut s = state_with(2.85, 5, 3);
-        apply(&mut s, Grade::Easy, today());
-        assert!((s.ease - EASE_MAX).abs() < 1e-6);
     }
 
     #[test]
     fn entrada_valida() {
-        assert_eq!(Grade::from_input("3"), Some(Grade::Good));
-        assert_eq!(Grade::from_input(" 1 "), Some(Grade::Again));
-        assert_eq!(Grade::from_input("5"), None);
+        assert_eq!(Grade::from_input("2"), Some(Grade::Correct));
+        assert_eq!(Grade::from_input(" 1 "), Some(Grade::Wrong));
+        assert_eq!(Grade::from_input("3"), None); // não existe mais 3–4
         assert_eq!(Grade::from_input(""), None);
     }
 }

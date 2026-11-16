@@ -108,7 +108,7 @@ impl Item {
 }
 
 /// Mostra a frente do item, coleta a resposta (digitada ou revelada)
-/// e lê a nota 1–4. `allow_quit`: no modo livre, "q" encerra a sessão.
+/// e lê a avaliação Errei/Acertei. `allow_quit`: no modo livre, "q" encerra a sessão.
 /// Retorna `None` em EOF/quit.
 fn present_item(it: &Item, allow_quit: bool) -> Option<Grade> {
     // cards `typed`: o prompt é só a 1ª linha do lado visível;
@@ -332,7 +332,7 @@ fn run_review(root: &Path, deck_filter: &[String], new_per_day: u32) -> Result<(
             .map_err(|e| format!("salvando state/history.jsonl: {e}"))?;
 
         answered += 1;
-        if grade == Grade::Again {
+        if grade == Grade::Wrong {
             errors += 1;
             println!(
                 "  {} {}",
@@ -385,29 +385,25 @@ fn ask_yes(prompt: &str) -> Result<bool, String> {
 }
 
 fn grade_label(g: Grade) -> &'static str {    match g {
-        Grade::Again => "Errei",
-        Grade::Hard => "Difícil",
-        Grade::Good => "Bom",
-        Grade::Easy => "Fácil",
+        Grade::Wrong => "Errei",
+        Grade::Correct => "Acertei",
     }
 }
 
-/// Lê a nota no prompt `1–4` (Enter = Bom). `None` em EOF.
+/// Lê a avaliação binária `1 Errei / 2 Acertei` (Enter = Acertei). `None` em EOF.
 fn read_grade() -> Option<Grade> {
     loop {
         ui::out(&format!(
-            "\n  {}  {}  {}  {}  {} ",
+            "\n  {}  {}  {} ",
             ui::red("1 ✗ Errei"),
-            ui::yellow("2 ▲ Difícil"),
-            ui::green("3 ✓ Bom"),
-            ui::cyan("4 ★ Fácil"),
-            ui::dim("(Enter = Bom)")
+            ui::green("2 ✓ Acertei"),
+            ui::dim("(Enter = Acertei)")
         ));
         match ui::read_line() {
-            Ok(Some(s)) if s.trim().is_empty() => return Some(Grade::Good),
+            Ok(Some(s)) if s.trim().is_empty() => return Some(Grade::Correct),
             Ok(Some(s)) => match Grade::from_input(&s) {
                 Some(g) => return Some(g),
-                None => println!("{}", ui::dim("  digite 1–4 (ou Enter = Bom)")),
+                None => println!("{}", ui::dim("  digite 1 ou 2 (ou Enter = Acertei)")),
             },
             _ => return None,
         }
@@ -477,7 +473,7 @@ fn run_study(root: &Path, deck_filter: &[String]) -> Result<(), String> {
             break;
         };
         count += 1;
-        if grade == Grade::Again {
+        if grade == Grade::Wrong {
             errors += 1;
             println!("  {}\n", ui::red("✗ anote o erro e siga"));
         } else {
