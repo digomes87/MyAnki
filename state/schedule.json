@@ -81,83 +81,83 @@
   },
   "italiano-0001#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0001#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0002#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0002#B": {
-    "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
-    "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "ease": 2.3,
+    "interval": 3,
+    "reps": 3,
+    "lapses": 1,
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0003#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0003#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0004#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0004#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0005#A": {
     "ease": 2.1,
-    "interval": 1,
-    "reps": 2,
+    "interval": 3,
+    "reps": 3,
     "lapses": 2,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0005#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0006#A": {
     "ease": 2.3,
@@ -168,84 +168,164 @@
     "last": "2026-11-15"
   },
   "italiano-0006#B": {
-    "ease": 2.5,
+    "ease": 2.1,
     "interval": 1,
-    "reps": 1,
-    "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "reps": 3,
+    "lapses": 2,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
   },
   "italiano-0007#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0007#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0008#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0008#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0009#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0009#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0010#A": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0010#B": {
     "ease": 2.5,
-    "interval": 1,
-    "reps": 1,
+    "interval": 3,
+    "reps": 2,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-19",
+    "last": "2026-11-16"
   },
   "italiano-0011#A": {
+    "ease": 2.5,
+    "interval": 3,
+    "reps": 2,
+    "lapses": 0,
+    "due": "2026-11-19",
+    "last": "2026-11-16"
+  },
+  "italiano-0011#B": {
     "ease": 2.5,
     "interval": 1,
     "reps": 1,
     "lapses": 0,
-    "due": "2026-11-16",
-    "last": "2026-11-15"
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0012#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0012#B": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0013#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0013#B": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0014#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0014#B": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0015#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0015#B": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
+  },
+  "italiano-0016#A": {
+    "ease": 2.5,
+    "interval": 1,
+    "reps": 1,
+    "lapses": 0,
+    "due": "2026-11-17",
+    "last": "2026-11-16"
   },
   "rust-0001#A": {
     "ease": 2.15,
