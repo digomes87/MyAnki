@@ -432,3 +432,73 @@
 {"id": "italiano-0432", "front": "bere · condizionale · noi", "back": "berremmo", "tags": ["verbos", "conjugacao", "condizionale"], "typed": true, "note": "conjugação — fonte: Ultimate Italian Conjugation (apkg)"}
 {"id": "italiano-0433", "front": "bere · condizionale · voi", "back": "berreste", "tags": ["verbos", "conjugacao", "condizionale"], "typed": true, "note": "conjugação — fonte: Ultimate Italian Conjugation (apkg)"}
 {"id": "italiano-0434", "front": "bere · condizionale · loro", "back": "berrebbero", "tags": ["verbos", "conjugacao", "condizionale"], "typed": true, "note": "conjugação — fonte: Ultimate Italian Conjugation (apkg)"}
+{"id": "italiano-0435", "front": "non ho comprato il libro perché non avevo abbastanza soldi", "back": "não comprei o livro porque não tinha dinheiro suficiente\n(ho comprato = passato prossimo, ação concluída; avevo = imperfetto, contexto de fundo)", "tags": ["gramatica"], "note": "anotações de aula — 2º lote — corrigido: perche → perché"}
+{"id": "italiano-0436", "front": "Da piccolo andavo spesso al parco con mio fratello", "back": "quando pequeno, eu ia com frequência ao parque com meu irmão\n(andare = ir, não 'caminhar'; spesso = com frequência; imperfetto = hábito no passado)", "tags": ["gramatica"], "note": "anotações de aula — 2º lote — corrigido: andava → andavo (1ª pessoa)"}
+{"id": "italiano-0437", "front": "Se fossi in te, accetterei quell'offerta", "back": "se eu fosse você, aceitaria aquela oferta\n(se + congiuntivo imperfetto (fossi) → condizionale presente (accetterei))", "tags": ["gramatica"], "note": "anotações de aula — 2º lote — tradução acrescentada"}
+{"id": "italiano-0438", "front": "se fossi in te", "back": "se eu fosse você\n(fossi = congiuntivo imperfetto de essere; o 'se' hipotético pede congiuntivo)", "tags": ["gramatica"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote — produção do 'se fossi in te'"}
+{"id": "italiano-0439", "front": "il resto è per lei", "back": "fique com o troco\n(lit. 'o troco é para o senhor' — formal)", "tags": ["restaurante"], "reverse": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0440", "front": "era tutto delizioso", "back": "estava tudo delicioso", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0441", "front": "un caffè, per favore", "back": "um café, por favor", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0442", "front": "buon appetito", "back": "bom apetite", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0443", "front": "salute!", "back": "saúde!\n(dito ao brindar)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0444", "front": "ho fame", "back": "estou com fome\n(fame = fome)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0445", "front": "ho sete", "back": "estou com sede\n(sete = sede)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0446", "front": "è buono", "back": "é bom", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0447", "front": "è cattivo", "back": "é ruim\n(cattivo = ruim, mau)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0448", "front": "colazione", "back": "café da manhã", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0449", "front": "pranzo", "back": "almoço", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0450", "front": "cena", "back": "jantar (a refeição)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0451", "front": "un cappuccino", "back": "um cappuccino", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0452", "front": "un cornetto", "back": "um croissant\n(o croissant italiano do café da manhã)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0453", "front": "antipasto", "back": "entrada\n(petiscos antes do prato principal)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0454", "front": "primo piatto", "back": "primeiro prato\n(massa, arroz ou sopa)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0455", "front": "secondo piatto", "back": "segundo prato\n(carne ou peixe)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0456", "front": "contorno", "back": "acompanhamento\n(legumes, salada)", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0457", "front": "dolce", "back": "sobremesa", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0458", "front": "frutta", "back": "fruta", "tags": ["comida"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0459", "front": "sto solo guardando", "back": "estou só olhando\n(stare + gerundio = ação em curso)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0460", "front": "cerco...", "back": "estou procurando...\n(cerco = io cerco, de cercare)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0461", "front": "è troppo caro", "back": "é caro demais", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0462", "front": "c'è uno sconto?", "back": "tem desconto?", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0463", "front": "posso provarlo?", "back": "posso experimentar?\n(provar + lo = experimentá-lo)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0464", "front": "dove sono i camerini?", "back": "onde ficam os provadores?", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0465", "front": "che taglia?", "back": "qual tamanho?\n(taglia = tamanho de roupa)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0466", "front": "prendo questo", "back": "vou levar este\n(mesmo 'prendo' de pedir no restaurante)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0467", "front": "vorrei cambiare questo", "back": "gostaria de trocar este", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0468", "front": "posso avere una busta?", "back": "posso pegar uma sacola?\n(busta = sacola; também = envelope)", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0469", "front": "altro?", "back": "algo mais?", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0470", "front": "basta così, grazie", "back": "é só isso, obrigado\n(basta = 'já é suficiente')", "tags": ["compras"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0471", "front": "vorrei un biglietto per...", "back": "gostaria de uma passagem para...\n(biglietto = bilhete/passagem)", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0472", "front": "andata e ritorno", "back": "ida e volta", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0473", "front": "solo andata", "back": "só ida", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0474", "front": "a che ora parte il treno?", "back": "a que horas o trem parte?", "tags": ["viagem"], "reverse": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0475", "front": "da quale binario?", "back": "de qual plataforma?\n(binario = plataforma/linha do trem)", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0476", "front": "l'aeroporto", "back": "o aeroporto", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0477", "front": "il treno", "back": "o trem", "tags": ["viagem"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0478", "front": "aperto", "back": "aberto", "tags": ["placas"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0479", "front": "chiuso", "back": "fechado", "tags": ["placas"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0480", "front": "entrata", "back": "entrada", "tags": ["placas"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0481", "front": "uscita", "back": "saída", "tags": ["placas"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0482", "front": "mi sono perso", "back": "eu me perdi\n(passato prossimo de perdersi; fem.: mi sono persa)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0483", "front": "dov'è la stazione?", "back": "onde fica a estação?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0484", "front": "dov'è la fermata dell'autobus?", "back": "onde fica a parada de ônibus?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0485", "front": "dov'è la metro?", "back": "onde fica o metrô?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0486", "front": "è lontano da qui?", "back": "é longe daqui?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0487", "front": "è vicino?", "back": "é perto?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0488", "front": "come arrivo a...?", "back": "como eu chego em...?", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0489", "front": "può mostrarmelo sulla mappa?", "back": "pode me mostrar no mapa?\n(formal; mostrarmelo = mostrare + mi + lo)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0490", "front": "sempre dritto", "back": "sempre em frente\n(dritto = reto)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0491", "front": "gira a destra", "back": "vire à direita\n(formal: giri a destra)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0492", "front": "gira a sinistra", "back": "vire à esquerda\n(formal: giri a sinistra)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0493", "front": "la prima a destra", "back": "na primeira à direita", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0494", "front": "la seconda a sinistra", "back": "na segunda à esquerda", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0495", "front": "all'incrocio", "back": "no cruzamento\n(incrocio = cruzamento/encruzilhada)", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote — corrigido: allíncrocio → all'incrocio"}
+{"id": "italiano-0496", "front": "al semaforo", "back": "no semáforo", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0497", "front": "vicino a...", "back": "perto de...", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0498", "front": "di fronte a...", "back": "em frente a...", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote — corrigido: di frone → di fronte"}
+{"id": "italiano-0499", "front": "dietro", "back": "atrás", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0500", "front": "davanti", "back": "na frente\n(davanti a... = em frente a...)", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0501", "front": "sopra", "back": "em cima\n(também: acima)", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0502", "front": "sotto", "back": "embaixo\n(também: abaixo)", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0503", "front": "dentro", "back": "dentro", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
+{"id": "italiano-0504", "front": "fuori", "back": "fora", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "anotações de aula — 2º lote"}
