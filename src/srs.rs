@@ -1,5 +1,6 @@
 use chrono::{Days, NaiveDate};
 use serde::{Deserialize, Serialize};
+use std::collections::BTreeMap;
 
 pub const EASE_MIN: f32 = 1.3;
 pub const EASE_MAX: f32 = 2.9;
@@ -81,6 +82,29 @@ pub fn apply(s: &mut SrsState, grade: Grade, today: NaiveDate) {
         .unwrap_or(today);
 }
 
+/// Irmãos ⇄ nunca dividem a sessão: ver a resposta de uma direção e em
+/// seguida ser testado pela outra não mede memória — é o "bury siblings"
+/// do Anki. Se A e B estão ambos vencidos, B (produção) adia 1 dia e A
+/// segue na fila. Retorna quantas direções B foram adiadas.
+pub fn space_siblings(schedule: &mut BTreeMap<String, SrsState>, today: NaiveDate) -> usize {
+    let pairs: Vec<(String, String)> = schedule
+        .keys()
+        .filter_map(|b| b.strip_suffix("#B").map(|id| (format!("{id}#A"), b.to_owned())))
+        .collect();
+    let mut moved = 0usize;
+    for (a_key, b_key) in pairs {
+        let a_due = schedule.get(&a_key).is_some_and(|a| a.due <= today);
+        let b_due = schedule.get(&b_key).is_some_and(|b| b.due <= today);
+        if !a_due || !b_due {
+            continue;
+        }
+        let Some(b) = schedule.get_mut(&b_key) else { continue };
+        b.due = today.checked_add_days(Days::new(1)).unwrap_or(today);
+        moved += 1;
+    }
+    moved
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -146,6 +170,76 @@ mod tests {
         let mut s = state_with(1.35, 5, 3);
         apply(&mut s, Grade::Wrong, today());
         assert!((s.ease - EASE_MIN).abs() < 1e-6);
+    }
+
+    fn sched_with(due: NaiveDate) -> SrsState {
+        SrsState {
+            ease: 2.5,
+            interval: 3,
+            reps: 2,
+            lapses: 0,
+            due,
+            last: None,
+        }
+    }
+
+    #[test]
+    fn irmaos_vencidos_juntos_adia_b() {
+        // lockstep: A e B vencem hoje → B escorrega, A fica
+        let mut s = std::collections::BTreeMap::new();
+        s.insert("it-1#A".to_owned(), sched_with(today()));
+        s.insert("it-1#B".to_owned(), sched_with(today()));
+        assert_eq!(space_siblings(&mut s, today()), 1);
+        assert_eq!(s["it-1#A"].due, today());
+        assert_eq!(
+            s["it-1#B"].due,
+            NaiveDate::from_ymd_opt(2026, 11, 16).unwrap()
+        );
+    }
+
+    #[test]
+    fn irmaos_atrasados_com_dues_diferentes_tambem_separam() {
+        // pular dias faz os dois caírem na mesma fila, mesmo com dues distintos
+        let mut s = std::collections::BTreeMap::new();
+        s.insert(
+            "it-1#A".to_owned(),
+            sched_with(NaiveDate::from_ymd_opt(2026, 11, 13).unwrap()),
+        );
+        s.insert(
+            "it-1#B".to_owned(),
+            sched_with(NaiveDate::from_ymd_opt(2026, 11, 14).unwrap()),
+        );
+        assert_eq!(space_siblings(&mut s, today()), 1);
+        assert_eq!(s["it-1#A"].due, NaiveDate::from_ymd_opt(2026, 11, 13).unwrap());
+        assert_eq!(
+            s["it-1#B"].due,
+            NaiveDate::from_ymd_opt(2026, 11, 16).unwrap()
+        );
+    }
+
+    #[test]
+    fn so_b_adia_e_so_quando_ambos_vencem() {
+        let tomorrow = NaiveDate::from_ymd_opt(2026, 11, 16).unwrap();
+        // B vence depois de A: nada a fazer
+        let mut s = std::collections::BTreeMap::new();
+        s.insert("it-1#A".to_owned(), sched_with(today()));
+        s.insert("it-1#B".to_owned(), sched_with(tomorrow));
+        assert_eq!(space_siblings(&mut s, today()), 0);
+        assert_eq!(s["it-1#B"].due, tomorrow);
+
+        // ambos no futuro (nem vencidos): o adiantamento é preguiçoso,
+        // a checagem roda de novo na sessão do dia em que vencerem
+        let mut s = std::collections::BTreeMap::new();
+        s.insert("it-1#A".to_owned(), sched_with(tomorrow));
+        s.insert("it-1#B".to_owned(), sched_with(tomorrow));
+        assert_eq!(space_siblings(&mut s, today()), 0);
+    }
+
+    #[test]
+    fn b_sem_a_nao_existe() {
+        let mut s = std::collections::BTreeMap::new();
+        s.insert("it-1#B".to_owned(), sched_with(today()));
+        assert_eq!(space_siblings(&mut s, today()), 0);
     }
 
     #[test]
