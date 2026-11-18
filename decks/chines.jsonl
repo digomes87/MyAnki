@@ -1,3 +1,54 @@
-{"id":"chines-0001","front":"你好","back":"olá / oi\nnǐ hǎo","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
-{"id":"chines-0002","front":"谢谢","back":"obrigado(a)\nxièxie","tags":["cortesia"],"reverse":true,"typed":true,"note":"seed inicial"}
-{"id":"chines-0003","front":"再见","back":"tchau / até logo\nzàijiàn","tags":["saudacoes"],"reverse":true,"typed":true,"note":"seed inicial"}
+{"id": "chines-0001", "front": "你好", "back": "olá / oi\nnǐ hǎo", "tags": ["saudacoes"], "reverse": true, "typed": true, "note": "seed inicial"}
+{"id": "chines-0002", "front": "谢谢", "back": "obrigado(a)\nxièxie", "tags": ["cortesia"], "reverse": true, "typed": true, "note": "seed inicial"}
+{"id": "chines-0003", "front": "再见", "back": "tchau / até logo\nzàijiàn", "tags": ["saudacoes"], "reverse": true, "typed": true, "note": "seed inicial"}
+{"id": "chines-0004", "front": "是", "back": "verbo ser\n(shì · não conjuga — mesma forma pra todas as pessoas)", "tags": ["gramatica", "verbos"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0017"}
+{"id": "chines-0005", "front": "有", "back": "verbo ter / possuir\n(yǒu · o negativo é sempre méiyǒu)", "tags": ["gramatica", "verbos"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0018"}
+{"id": "chines-0006", "front": "不", "back": "não (antes do verbo)\n(bù · vira bú antes de 4º tom)", "tags": ["gramatica"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0024"}
+{"id": "chines-0007", "front": "没有", "back": "não ter / não ter acontecido\n(méiyǒu · nega 有 e o passado)", "tags": ["gramatica"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0024"}
+{"id": "chines-0008", "front": "你", "back": "você (informal)\n(nǐ)", "tags": ["gramatica", "formalidade"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0025"}
+{"id": "chines-0009", "front": "您", "back": "você (formal, respeito)\n(nín · usado com estranhos e mais velhos)", "tags": ["gramatica", "formalidade"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0025"}
+{"id": "chines-0010", "front": "吗", "back": "partícula de pergunta sim/não\n(ma · no fim da frase)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0011", "front": "谁", "back": "quem\n(shéi)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0012", "front": "什么", "back": "o quê / que\n(shénme)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0013", "front": "哪里", "back": "onde\n(nǎlǐ · variante: 哪儿 nǎr)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0014", "front": "什么时候", "back": "quando\n(shénme shíhòu · lit. \"que momento\")", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0015", "front": "为什么", "back": "por quê\n(wèishénme)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0016", "front": "怎么", "back": "como\n(zěnme)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0017", "front": "多少", "back": "quanto / quantos\n(duōshǎo · para preço e quantidade)", "tags": ["gramatica", "perguntas"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0026"}
+{"id": "chines-0018", "front": "们", "back": "sufixo de plural (pessoas)\n(men · 我们 nós, 他们 elas/eles)", "tags": ["gramatica", "plural"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0022"}
+{"id": "chines-0019", "front": "一本书", "back": "um livro\n(yì běn shū · 本 = classificador de livros)", "tags": ["gramatica", "classificadores"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0020"}
+{"id": "chines-0020", "front": "一个人", "back": "uma pessoa\n(yí gè rén · 个 = classificador genérico)", "tags": ["gramatica", "classificadores"], "reverse": true, "typed": true, "note": "bloco A1-1 · espelho de italiano-0020"}
+{"id": "chines-0021", "front": "chinês tem artigos (o/a, um/uma)?", "back": "não existem — o contexto decide\nao contar: número + classificador (um livro = 一本书 yì běn shū)", "tags": ["gramatica", "classificadores"], "note": "bloco A1-1 · espelho de italiano-0020"}
+{"id": "chines-0022", "front": "você fala inglês? (a um amigo)", "back": "你说英文吗\nNǐ shuō Yīngwén ma?", "tags": ["gramatica", "perguntas", "formalidade"], "note": "bloco A1-1 · espelho de italiano-0025"}
+{"id": "chines-0023", "front": "o senhor fala inglês? (formal)", "back": "您说英文吗\nNín shuō Yīngwén ma?", "tags": ["gramatica", "formalidade"], "note": "bloco A1-1 · espelho de italiano-0025"}
+{"id": "chines-0024", "front": "eu não falo chinês", "back": "我不说中文\nWǒ bù shuō Zhōngwén", "tags": ["gramatica"], "note": "bloco A1-1 · espelho de italiano-0024"}
+{"id": "chines-0025", "front": "面试", "back": "a entrevista (de emprego)\nmiànshì · 参加面试 = fazer uma entrevista", "tags": ["trabalho"], "reverse": true, "typed": true, "note": "espelho de italiano-0527 · e-mail (18/11)"}
+{"id": "chines-0026", "front": "简历", "back": "o currículo, o CV\njiǎnlì", "tags": ["trabalho"], "reverse": true, "typed": true, "note": "espelho de italiano-0526 · e-mail (18/11)"}
+{"id": "chines-0027", "front": "附件", "back": "o anexo (e-mail)\nfùjiàn · 附件是我的简历 = meu CV está em anexo", "tags": ["email"], "reverse": true, "typed": true, "note": "espelho de italiano-0532 · e-mail (18/11)"}
+{"id": "chines-0028", "front": "获得", "back": "obter, alcançar\nhuòdé · 获得证书 = obter certificação (também 取得 qǔdé)", "tags": ["verbos", "trabalho"], "reverse": true, "typed": true, "note": "espelho de italiano-0531 · e-mail (18/11)"}
+{"id": "chines-0029", "front": "超过", "back": "mais de, ultrapassar\nchāoguò · 超过八年 = mais de 8 anos", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0529 · e-mail (18/11)"}
+{"id": "chines-0030", "front": "大约", "back": "aproximadamente, cerca de\ndàyuē", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0530 · e-mail (18/11)"}
+{"id": "chines-0031", "front": "muito obrigado pelo seu contato (formal)", "back": "感谢您的联系\nGǎnxiè nín de liánxì", "tags": ["email"], "note": "espelho de italiano-0521 · e-mail (18/11)"}
+{"id": "chines-0032", "front": "tenho muito interesse (nisso)", "back": "我很感兴趣\nWǒ hěn gǎn xìngqù · 对…感兴趣 = ter interesse em", "tags": ["expressoes"], "note": "espelho de italiano-0522 · e-mail (18/11)"}
+{"id": "chines-0033", "front": "aguardo a sua resposta (fórmula de e-mail)", "back": "期待您的回复\nQīdài nín de huífù", "tags": ["email"], "note": "espelho de italiano-0524 · e-mail (18/11)"}
+{"id": "chines-0034", "front": "atenciosamente (fecho formal de carta)", "back": "此致敬礼\nCǐ zhì jìng lǐ · e-mail do dia a dia: 祝好 zhù hǎo", "tags": ["email", "formalidade"], "note": "espelho de italiano-0525 · e-mail (18/11)"}
+{"id": "chines-0035", "front": "prezada senhora (abertura formal)", "back": "尊敬的罗西女士\nZūnjìng de Luōxī nǚshì = Prezada Sra. Rossi", "tags": ["email", "formalidade"], "note": "espelho de italiano-0537 · e-mail (18/11)"}
+{"id": "chines-0036", "front": "posso fazer a entrevista a qualquer momento", "back": "我随时可以参加面试\nWǒ suíshí kěyǐ cānjiā miànshì", "tags": ["trabalho"], "note": "espelho de italiano-0523 · e-mail (18/11)"}
+{"id": "chines-0037", "front": "一", "back": "um\nyī · diante de outro tom vira yí/yì", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0038", "front": "二", "back": "dois\nèr · contando coisas: 两 liǎng", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0039", "front": "三", "back": "três\nsān", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0040", "front": "四", "back": "quatro\nsì", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0041", "front": "五", "back": "cinco\nwǔ", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0042", "front": "六", "back": "seis\nliù", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0043", "front": "七", "back": "sete\nqī", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0044", "front": "八", "back": "oito\nbā", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0045", "front": "九", "back": "nove\njiǔ", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0046", "front": "十", "back": "dez\nshí", "tags": ["numeros"], "reverse": true, "typed": true, "note": "espelho dos números de italiano-0555..0564 (18/11)"}
+{"id": "chines-0047", "front": "星期一", "back": "segunda-feira\nxīngqīyī · 星期 xīngqī = semana", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0048", "front": "星期二", "back": "terça-feira\nxīngqī'èr", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0049", "front": "星期三", "back": "quarta-feira\nxīngqīsān", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0050", "front": "星期四", "back": "quinta-feira\nxīngqīsì", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0051", "front": "星期五", "back": "sexta-feira\nxīngqīwǔ", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0052", "front": "星期六", "back": "sábado\nxīngqīliù", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0053", "front": "星期日", "back": "domingo\nxīngqīrì · também 星期天 xīngqītiān", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
+{"id": "chines-0054", "front": "Como se formam os dias da semana em chinês?", "back": "星期 (semana) + número: segunda = 星期一 (1) … sábado = 星期六 (6)\nexceção: domingo = 星期日/星期天, sem número", "tags": ["tempo"], "note": "espelho de italiano-0547..0553 (18/11)"}
