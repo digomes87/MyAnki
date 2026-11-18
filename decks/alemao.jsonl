@@ -71,3 +71,114 @@
 {"id": "alemao-0071", "front": "nós estudamos (lernen)\n(verbos -en regulares: wir + -en, igual ao infinitivo)", "back": "wir lernen", "tags": ["gramatica", "verbos"], "typed": true, "note": "espelho de italiano-0541..0546 · padrão -en regular (18/11)"}
 {"id": "alemao-0072", "front": "vocês estudam (lernen)\n(verbos -en regulares: ihr + -t)", "back": "ihr lernt", "tags": ["gramatica", "verbos"], "typed": true, "note": "espelho de italiano-0541..0546 · padrão -en regular (18/11)"}
 {"id": "alemao-0073", "front": "eles estudam (lernen)\n(verbos -en regulares: sie/Sie + -en)", "back": "sie lernen", "tags": ["gramatica", "verbos"], "typed": true, "note": "espelho de italiano-0541..0546 · padrão -en regular (18/11)"}
+{"id": "alemao-0074", "front": "cuidado! / atenção!\n(du imperative; formal: Passen Sie auf!)", "back": "pass auf!", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0041 (18/11)"}
+{"id": "alemao-0075", "front": "o que está acontecendo?\n(was passiert? também serve)", "back": "was ist los?", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0042 (18/11)"}
+{"id": "alemao-0076", "front": "qual é o problema?\n(das Problem = o problema)", "back": "was ist das Problem?", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0043 (18/11)"}
+{"id": "alemao-0077", "front": "não se preocupe\n(mach dir keine Sorgen também; die Sorge = preocupação)", "back": "keine Sorge!", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0044 (18/11)"}
+{"id": "alemao-0078", "front": "eu acho que sim\n(glauben = acreditar; ich denke ja também)", "back": "ich glaube ja", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0045 (18/11)"}
+{"id": "alemao-0079", "front": "eu acho que não\n(glauben = acreditar)", "back": "ich glaube nein", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0046 (18/11)"}
+{"id": "alemao-0080", "front": "espero que sim\n(hoffen = esperar; ich hoffe ja coloquial)", "back": "ich hoffe es", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0047 (18/11)"}
+{"id": "alemao-0081", "front": "sério?\n(wirklich = de verdade)", "back": "wirklich?", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0048 (18/11)"}
+{"id": "alemao-0082", "front": "você está falando sério?\n(meinen = querer dizer; ernst = sério)", "back": "meinst du das ernst?", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0049 (18/11)"}
+{"id": "alemao-0083", "front": "você está brincando?\n(der Witz = piada — literal: 'tá fazendo piadas?')", "back": "machst du Witze?", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0050 (18/11)"}
+{"id": "alemao-0084", "front": "imagina! / que isso! (resposta a obrigado)\n(literal: 'nada a agradecer')", "back": "nichts zu danken", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0051 (18/11)"}
+{"id": "alemao-0085", "front": "sem problemas\n(kein nega substantivo)", "back": "kein Problem", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0052 (18/11)"}
+{"id": "alemao-0086", "front": "com prazer\n(mit Vergnügen = mais enfático)", "back": "gern", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0053 (18/11)"}
+{"id": "alemao-0087", "front": "depende\n(darauf = nisso; je nachdem também)", "back": "es kommt darauf an", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0054 (18/11)"}
+{"id": "alemao-0088", "front": "vamos lá\n(gehen wir! também)", "back": "los geht's!", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0055 (18/11)"}
+{"id": "alemao-0089", "front": "força! / vamos! (ânimo)\n(torcida: Du schaffst das! = 'você consegue!')", "back": "los!", "tags": ["expressoes"], "typed": true, "note": "espelho de italiano-0056 (18/11)"}
+{"id": "alemao-0090", "front": "gostaria de reservar uma mesa\n(möchte = gostaria; der Tisch; einen = acusativo)", "back": "Ich möchte einen Tisch reservieren", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0057 (18/11)"}
+{"id": "alemao-0091", "front": "uma mesa para dois, por favor\n(für + número; bitte no fim)", "back": "einen Tisch für zwei, bitte", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0058 (18/11)"}
+{"id": "alemao-0092", "front": "posso ver o menu?\n(die Speisekarte = o menu de restaurante)", "back": "kann ich die Speisekarte sehen?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0059 (18/11)"}
+{"id": "alemao-0093", "front": "o que você recomenda? (formal)\n(empfehlen = recomendar; uns = 'pra gente' (como o ci italiano))", "back": "was empfehlen Sie uns?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0060 (18/11)"}
+{"id": "alemao-0094", "front": "qual é o prato do dia?\n(das Tagesgericht; der Tag = dia)", "back": "was ist das Tagesgericht?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0061 (18/11)"}
+{"id": "alemao-0095", "front": "gostaria de fazer o pedido\n(bestellen = pedir)", "back": "ich möchte bestellen", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0062 (18/11)"}
+{"id": "alemao-0096", "front": "eu vou de... / eu pego (para pedir)\n(nehmen = pegar; nehme irregular)", "back": "ich nehme...", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0063 (18/11)"}
+{"id": "alemao-0097", "front": "algo para beber?\n(zu trinken = para beber; zu essen = para comer)", "back": "etwas zu trinken?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0064 (18/11)"}
+{"id": "alemao-0098", "front": "água sem gás\n(still = 'parado', sem gás)", "back": "stilles Wasser", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0065 (18/11)"}
+{"id": "alemao-0099", "front": "água com gás\n(também: Wasser mit Gas)", "back": "Sprudelwasser", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0066 (18/11)"}
+{"id": "alemao-0100", "front": "um copo de vinho tinto\n(das Glas = copo; der Rotwein)", "back": "ein Glas Rotwein", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0067 (18/11)"}
+{"id": "alemao-0101", "front": "um copo de vinho branco\n(der Weißwein)", "back": "ein Glas Weißwein", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0068 (18/11)"}
+{"id": "alemao-0102", "front": "um chopp\n(das Fass = barril — literal 'do barril')", "back": "ein Bier vom Fass", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0069 (18/11)"}
+{"id": "alemao-0103", "front": "a conta, por favor\n(die Rechnung = a conta)", "back": "die Rechnung, bitte", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0070 (18/11)"}
+{"id": "alemao-0104", "front": "podemos pagar separadamente?\n(getrennt = separado; bezahlen = pagar)", "back": "können wir getrennt bezahlen?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0071 (18/11)"}
+{"id": "alemao-0105", "front": "posso pagar com cartão?\n(mit Karte = com cartão)", "back": "kann ich mit Karte bezahlen?", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0072 (18/11)"}
+{"id": "alemao-0106", "front": "se eu fosse você\n(lit. 'no seu lugar'; wenn ich du wäre também)", "back": "an deiner Stelle", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0438 (18/11)"}
+{"id": "alemao-0107", "front": "fique com o troco\n(idioma fixo ao pagar; literal seria: der Rest ist für Sie)", "back": "Stimmt so", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0439 (18/11)"}
+{"id": "alemao-0108", "front": "estava tudo delicioso\n(lecker = delicioso; köstlich = formal)", "back": "es war alles sehr lecker", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0440 (18/11)"}
+{"id": "alemao-0109", "front": "um café, por favor\n(einen acusativo — pedido pede artigo)", "back": "einen Kaffee, bitte", "tags": ["restaurante"], "typed": true, "note": "espelho de italiano-0441 (18/11)"}
+{"id": "alemao-0110", "front": "bom apetite\n(frase fixa antes de comer)", "back": "guten Appetit", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0442 (18/11)"}
+{"id": "alemao-0111", "front": "saúde! (brinde)\n(prost! = informal)", "back": "zum Wohl!", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0443 (18/11)"}
+{"id": "alemao-0112", "front": "estou com fome\n(der Hunger; 'ter fome' usa haben)", "back": "ich habe Hunger", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0444 (18/11)"}
+{"id": "alemao-0113", "front": "estou com sede\n(der Durst)", "back": "ich habe Durst", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0445 (18/11)"}
+{"id": "alemao-0114", "front": "é bom (comida)\n(schmecken = ter gosto; lecker = adj)", "back": "es schmeckt", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0446 (18/11)"}
+{"id": "alemao-0115", "front": "é ruim (comida)\n(alemão diz 'não está bom'; schlecht = ruim em geral)", "back": "es schmeckt nicht", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0447 (18/11)"}
+{"id": "alemao-0116", "front": "café da manhã\n(früh = cedo)", "back": "das Frühstück", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0448 (18/11)"}
+{"id": "alemao-0117", "front": "almoço\n(lit. 'comida do meio-dia')", "back": "das Mittagessen", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0449 (18/11)"}
+{"id": "alemao-0118", "front": "jantar (a refeição)\n(der Abend = noite)", "back": "das Abendessen", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0450 (18/11)"}
+{"id": "alemao-0119", "front": "um cappuccino\n(der — empréstimo do italiano)", "back": "ein Cappuccino", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0451 (18/11)"}
+{"id": "alemao-0120", "front": "um croissant\n(der — na Áustria: Kipferl)", "back": "ein Croissant", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0452 (18/11)"}
+{"id": "alemao-0121", "front": "entrada (de refeição)\n(vor = antes + die Speise)", "back": "die Vorspeise", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0453 (18/11)"}
+{"id": "alemao-0122", "front": "primeiro prato\n(der Gang = 'etapa' da refeição)", "back": "der erste Gang", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0454 (18/11)"}
+{"id": "alemao-0123", "front": "segundo prato\n(der zweite Gang)", "back": "der zweite Gang", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0455 (18/11)"}
+{"id": "alemao-0124", "front": "acompanhamento\n(beilegen = pôr ao lado)", "back": "die Beilage", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0456 (18/11)"}
+{"id": "alemao-0125", "front": "sobremesa\n(lit. 'atrás da mesa')", "back": "der Nachtisch", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0457 (18/11)"}
+{"id": "alemao-0126", "front": "fruta\n(das Obst = coletivo; eine Frucht = uma fruta)", "back": "das Obst", "tags": ["comida"], "typed": true, "note": "espelho de italiano-0458 (18/11)"}
+{"id": "alemao-0127", "front": "estou só olhando\n(schauen = olhar)", "back": "ich schaue nur", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0459 (18/11)"}
+{"id": "alemao-0128", "front": "estou procurando...\n(suchen = procurar)", "back": "ich suche...", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0460 (18/11)"}
+{"id": "alemao-0129", "front": "é caro demais\n(zu = demais; teuer = caro)", "back": "das ist zu teuer", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0461 (18/11)"}
+{"id": "alemao-0130", "front": "tem desconto?\n(der Rabatt; im Angebot = em promoção)", "back": "gibt es einen Rabatt?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0462 (18/11)"}
+{"id": "alemao-0131", "front": "posso experimentar (roupa)?\n(anprobieren = provar roupa)", "back": "kann ich das anprobieren?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0463 (18/11)"}
+{"id": "alemao-0132", "front": "onde ficam os provadores?\n(umkleiden = trocar de roupa; die Kabine)", "back": "wo sind die Umkleidekabinen?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0464 (18/11)"}
+{"id": "alemao-0133", "front": "qual tamanho?\n(die Größe = tamanho)", "back": "welche Größe?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0465 (18/11)"}
+{"id": "alemao-0134", "front": "vou levar este\n(nehmen irregular: nehme)", "back": "ich nehme das", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0466 (18/11)"}
+{"id": "alemao-0135", "front": "gostaria de trocar este\n(umtauschen = trocar compra; tauschen = trocar)", "back": "ich möchte das umtauschen", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0467 (18/11)"}
+{"id": "alemao-0136", "front": "posso pegar uma sacola?\n(die Tüte = sacola)", "back": "kann ich eine Tüte haben?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0468 (18/11)"}
+{"id": "alemao-0137", "front": "algo mais? (pergunta do vendedor)\n(lit. 'senão ainda algo?')", "back": "sonst noch etwas?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0469 (18/11)"}
+{"id": "alemao-0138", "front": "é só isso, obrigado\n(das ist alles = é tudo)", "back": "das ist alles, danke", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0470 (18/11)"}
+{"id": "alemao-0139", "front": "gostaria de uma passagem para...\n(die Fahrkarte; nach + cidade)", "back": "ich möchte eine Fahrkarte nach...", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0471 (18/11)"}
+{"id": "alemao-0140", "front": "ida e volta\n(lit. 'para lá e de volta')", "back": "hin und zurück", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0472 (18/11)"}
+{"id": "alemao-0141", "front": "só ida\n(na bilheteria também: nur einfach)", "back": "einfache Fahrt", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0473 (18/11)"}
+{"id": "alemao-0142", "front": "a que horas o trem parte?\n(abfahren = partir; um wie viel Uhr = a que horas)", "back": "wann fährt der Zug ab?", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0474 (18/11)"}
+{"id": "alemao-0143", "front": "de qual plataforma?\n(das Gleis; der Bahnsteig = plataforma física)", "back": "von welchem Gleis?", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0475 (18/11)"}
+{"id": "alemao-0144", "front": "o aeroporto\n(der Flug = voo + der Hafen = porto)", "back": "der Flughafen", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0476 (18/11)"}
+{"id": "alemao-0145", "front": "o trem\n(der Zug)", "back": "der Zug", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0477 (18/11)"}
+{"id": "alemao-0146", "front": "aberto (placa)\n(adj comum: offen)", "back": "geöffnet", "tags": ["placas"], "typed": true, "note": "espelho de italiano-0478 (18/11)"}
+{"id": "alemao-0147", "front": "fechado (placa)\n(fechado hoje: wir haben geschlossen)", "back": "geschlossen", "tags": ["placas"], "typed": true, "note": "espelho de italiano-0479 (18/11)"}
+{"id": "alemao-0148", "front": "entrada (sinal)\n(ein = para dentro)", "back": "der Eingang", "tags": ["placas"], "typed": true, "note": "espelho de italiano-0480 (18/11)"}
+{"id": "alemao-0149", "front": "saída (sinal)\n(aus = para fora)", "back": "der Ausgang", "tags": ["placas"], "typed": true, "note": "espelho de italiano-0481 (18/11)"}
+{"id": "alemao-0150", "front": "eu me perdi\n(sich verlaufen = perder o caminho)", "back": "ich habe mich verlaufen", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0482 (18/11)"}
+{"id": "alemao-0151", "front": "onde fica a estação (de trem)?\n(der Bahnhof)", "back": "wo ist der Bahnhof?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0483 (18/11)"}
+{"id": "alemao-0152", "front": "onde fica a parada de ônibus?\n(halten = parar; die Stelle = lugar)", "back": "wo ist die Bushaltestelle?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0484 (18/11)"}
+{"id": "alemao-0153", "front": "onde fica o metrô?\n(U-Bahn = Untergrundbahn, lit. 'trem do subsolo')", "back": "wo ist die U-Bahn?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0485 (18/11)"}
+{"id": "alemao-0154", "front": "é longe daqui?\n(weit = longe)", "back": "ist es weit von hier?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0486 (18/11)"}
+{"id": "alemao-0155", "front": "é perto?\n(die Nähe = proximidade; nah = perto)", "back": "ist es in der Nähe?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0487 (18/11)"}
+{"id": "alemao-0156", "front": "como eu chego em...?\n(zu + dativo = até; wie komme ich = como chego)", "back": "wie komme ich zu...?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0488 (18/11)"}
+{"id": "alemao-0157", "front": "pode me mostrar no mapa? (formal)\n(zeigen = mostrar; auf der Karte = no mapa)", "back": "können Sie mir das auf der Karte zeigen?", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0489 (18/11)"}
+{"id": "alemao-0158", "front": "sempre em frente\n(geradeaus = reto)", "back": "immer geradeaus", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0490 (18/11)"}
+{"id": "alemao-0159", "front": "vire à direita\n(abbiegen = virar; informal: bieg rechts ab)", "back": "biegen Sie rechts ab", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0491 (18/11)"}
+{"id": "alemao-0160", "front": "vire à esquerda\n(abbiegen = virar; informal: bieg links ab)", "back": "biegen Sie links ab", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0492 (18/11)"}
+{"id": "alemao-0161", "front": "na primeira à direita\n(die Straße = rua)", "back": "die erste Straße rechts", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0493 (18/11)"}
+{"id": "alemao-0162", "front": "na segunda à esquerda\n(die zweite Straße links)", "back": "die zweite Straße links", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0494 (18/11)"}
+{"id": "alemao-0163", "front": "no cruzamento\n(die Kreuzung; kreuzen = cruzar)", "back": "an der Kreuzung", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0495 (18/11)"}
+{"id": "alemao-0164", "front": "no semáforo\n(die Ampel)", "back": "an der Ampel", "tags": ["direcoes"], "typed": true, "note": "espelho de italiano-0496 (18/11)"}
+{"id": "alemao-0165", "front": "perto de...\n(nah bei + dativo também)", "back": "in der Nähe von...", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0497 (18/11)"}
+{"id": "alemao-0166", "front": "em frente a...\n(gegenüber = do outro lado)", "back": "gegenüber von...", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0498 (18/11)"}
+{"id": "alemao-0167", "front": "atrás\n(hinter + acusativo = atrás de)", "back": "hinten", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0499 (18/11)"}
+{"id": "alemao-0168", "front": "na frente\n(vor + dativo = na frente de)", "back": "vorn", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0500 (18/11)"}
+{"id": "alemao-0169", "front": "em cima\n(über + dativo = em cima de)", "back": "oben", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0501 (18/11)"}
+{"id": "alemao-0170", "front": "embaixo\n(unter = embaixo de)", "back": "unten", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0502 (18/11)"}
+{"id": "alemao-0171", "front": "dentro\n(innen também; in + dativo = dentro de)", "back": "drinnen", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0503 (18/11)"}
+{"id": "alemao-0172", "front": "fora\n(außerhalb von = fora de)", "back": "draußen", "tags": ["posicoes"], "typed": true, "note": "espelho de italiano-0504 (18/11)"}
+{"id": "alemao-0173", "front": "bom dia\n(Guten Morgen só de manhã; Guten Tag serve o dia todo)", "back": "Guten Tag", "tags": ["saudacoes"], "typed": true, "note": "espelho de italiano-0002 (18/11)"}
+{"id": "alemao-0174", "front": "boa noite (na hora de dormir)\n(annoitecendo (saudação): Guten Abend)", "back": "Gute Nacht", "tags": ["saudacoes"], "typed": true, "note": "espelho de italiano-0004 (18/11)"}
+{"id": "alemao-0175", "front": "tchau (neutro-formal)\n(lit. 'até rever-se'; coloquial: tschüss)", "back": "auf Wiedersehen", "tags": ["saudacoes"], "typed": true, "note": "espelho de italiano-0005 (18/11)"}
+{"id": "alemao-0176", "front": "até breve\n(bald = em breve)", "back": "bis bald", "tags": ["saudacoes"], "typed": true, "note": "espelho de italiano-0006 (18/11)"}
+{"id": "alemao-0177", "front": "por favor\n(palavra-coringa: também 'de nada' e 'às ordens')", "back": "bitte", "tags": ["cortesia"], "typed": true, "note": "espelho de italiano-0007 (18/11)"}
+{"id": "alemao-0178", "front": "de nada (resposta a obrigado)\n(lit. 'feito com gosto'; bitte também serve)", "back": "Gern geschehen", "tags": ["cortesia"], "typed": true, "note": "espelho de italiano-0008 (18/11)"}
+{"id": "alemao-0179", "front": "desculpa\n(coloquial: entschuldige)", "back": "Entschuldigung", "tags": ["cortesia"], "typed": true, "note": "espelho de italiano-0009 (18/11)"}
+{"id": "alemao-0180", "front": "prazer em conhecer\n(lit. 'alegra-me'; formal: Angenehm)", "back": "Freut mich", "tags": ["apresentacao"], "typed": true, "note": "espelho de italiano-0010 (18/11)"}
+{"id": "alemao-0181", "front": "meu nome é...\n(heißen = chamar-se; também: ich bin...)", "back": "ich heiße...", "tags": ["apresentacao"], "typed": true, "note": "espelho de italiano-0011 (18/11)"}
+{"id": "alemao-0182", "front": "quanto custa?\n(kosten = custar)", "back": "was kostet das?", "tags": ["compras"], "typed": true, "note": "espelho de italiano-0012 (18/11)"}
+{"id": "alemao-0183", "front": "onde fica o banheiro?\n(die Toilette; placas: WC)", "back": "wo ist die Toilette?", "tags": ["viagem"], "typed": true, "note": "espelho de italiano-0013 (18/11)"}
+{"id": "alemao-0184", "front": "estou bem\n(mir = 'a mim' (dativo); geht's = geht es)", "back": "mir geht's gut", "tags": ["saudacoes"], "typed": true, "note": "espelho de italiano-0016 (18/11)"}

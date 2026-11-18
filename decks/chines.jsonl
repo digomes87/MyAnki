@@ -52,3 +52,114 @@
 {"id": "chines-0052", "front": "星期六", "back": "sábado\nxīngqīliù", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
 {"id": "chines-0053", "front": "星期日", "back": "domingo\nxīngqīrì · também 星期天 xīngqītiān", "tags": ["tempo"], "reverse": true, "typed": true, "note": "espelho dos dias de italiano-0547..0553 (18/11)"}
 {"id": "chines-0054", "front": "Como se formam os dias da semana em chinês?", "back": "星期 (semana) + número: segunda = 星期一 (1) … sábado = 星期六 (6)\nexceção: domingo = 星期日/星期天, sem número", "tags": ["tempo"], "note": "espelho de italiano-0547..0553 (18/11)"}
+{"id": "chines-0055", "front": "小心", "back": "cuidado! / atenção\nxiǎoxīn · lit. 'o coração pequeno'", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0041 (18/11)"}
+{"id": "chines-0056", "front": "怎么了？", "back": "o que está acontecendo?\nzěnme le · 怎么 = como", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0042 (18/11)"}
+{"id": "chines-0057", "front": "qual é o problema?", "back": "有什么问题吗？\nyǒu shénme wèntí ma · 问题 wèntí = problema", "tags": ["expressoes"], "note": "espelho de italiano-0043 (18/11)"}
+{"id": "chines-0058", "front": "别担心", "back": "não se preocupe\nbié dānxīn · 别 = não faça + 担心 = preocupar", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0044 (18/11)"}
+{"id": "chines-0059", "front": "我觉得是", "back": "eu acho que sim\nwǒ juéde shì · 觉得 juéde = achar", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0045 (18/11)"}
+{"id": "chines-0060", "front": "eu acho que não", "back": "我觉得不是\nwǒ juéde bù shì", "tags": ["expressoes"], "note": "espelho de italiano-0046 (18/11)"}
+{"id": "chines-0061", "front": "希望如此", "back": "espero que sim\nxīwàng rúcǐ · lit. 'espero que seja assim'", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0047 (18/11)"}
+{"id": "chines-0062", "front": "真的？", "back": "sério?\nzhēn de · 真的 = de verdade", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0048 (18/11)"}
+{"id": "chines-0063", "front": "você está falando sério?", "back": "你是认真的吗？\nnǐ shì rènzhēn de ma · 认真 rènzhēn = sério", "tags": ["expressoes"], "note": "espelho de italiano-0049 (18/11)"}
+{"id": "chines-0064", "front": "você está brincando?", "back": "你在开玩笑吗？\nnǐ zài kāiwánxiào ma · 开玩笑 = brincar", "tags": ["expressoes"], "note": "espelho de italiano-0050 (18/11)"}
+{"id": "chines-0065", "front": "不客气", "back": "imagina! / que isso! (resposta a obrigado)\nbú kèqi · lit. 'não cerimônia'", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0051 (18/11)"}
+{"id": "chines-0066", "front": "没问题", "back": "sem problemas\nméi wèntí", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0052 (18/11)"}
+{"id": "chines-0067", "front": "我很乐意", "back": "com prazer\nwǒ hěn lèyì · 乐意 lèyì = disposto", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0053 (18/11)"}
+{"id": "chines-0068", "front": "看情况", "back": "depende\nkàn qíngkuàng · lit. 'olha a situação'", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0054 (18/11)"}
+{"id": "chines-0069", "front": "走吧", "back": "vamos lá\nzǒu ba · 吧 suaviza em proposta", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0055 (18/11)"}
+{"id": "chines-0070", "front": "加油！", "back": "força! / vamos! (ânimo)\njiāyóu · lit. 'põe óleo' — torcida universal", "tags": ["expressoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0056 (18/11)"}
+{"id": "chines-0071", "front": "gostaria de reservar uma mesa", "back": "我想订一张桌子\nwǒ xiǎng dìng yì zhāng zhuōzi · 张 = classificador de mesa", "tags": ["restaurante"], "note": "espelho de italiano-0057 (18/11)"}
+{"id": "chines-0072", "front": "uma mesa para dois, por favor", "back": "请给我们一张两个人的桌子\nqǐng gěi wǒmen yì zhāng liǎng gè rén de zhuōzi", "tags": ["restaurante"], "note": "espelho de italiano-0058 (18/11)"}
+{"id": "chines-0073", "front": "posso ver o menu?", "back": "可以看菜单吗？\nkěyǐ kàn càidān ma · 菜单 càidān = menu", "tags": ["restaurante"], "note": "espelho de italiano-0059 (18/11)"}
+{"id": "chines-0074", "front": "o que você recomenda?", "back": "你推荐什么？\nnǐ tuījiàn shénme · 推荐 tuījiàn = recomendar", "tags": ["restaurante"], "note": "espelho de italiano-0060 (18/11)"}
+{"id": "chines-0075", "front": "qual é o prato do dia?", "back": "今天的特色菜是什么？\njīntiān de tèsè cài shì shénme · 特色菜 = prato da casa", "tags": ["restaurante"], "note": "espelho de italiano-0061 (18/11)"}
+{"id": "chines-0076", "front": "gostaria de fazer o pedido", "back": "我想点菜\nwǒ xiǎng diǎncài · 点菜 diǎncài = fazer o pedido", "tags": ["restaurante"], "note": "espelho de italiano-0062 (18/11)"}
+{"id": "chines-0077", "front": "我要…", "back": "eu vou de... / eu pego (para pedir)\nwǒ yào · 要 = querer / vou de", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0063 (18/11)"}
+{"id": "chines-0078", "front": "你喝什么？", "back": "algo para beber? (pergunta do garçom)\nnǐ hē shénme · 喝 hē = beber", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0064 (18/11)"}
+{"id": "chines-0079", "front": "纯净水", "back": "água sem gás\nchúnjìngshuǐ · lit. 'água purificada'", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0065 (18/11)"}
+{"id": "chines-0080", "front": "气泡水", "back": "água com gás\nqìpào shuǐ · 气泡 = bolha", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0066 (18/11)"}
+{"id": "chines-0081", "front": "红酒", "back": "vinho tinto\nhóngjiǔ · lit. 'vinho vermelho'; um copo: 一杯红酒", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0067 (18/11)"}
+{"id": "chines-0082", "front": "白葡萄酒", "back": "vinho branco\nbái pútáojiǔ · ⚠️ 白酒 sozinho = aguardente de arroz!", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0068 (18/11)"}
+{"id": "chines-0083", "front": "生啤酒", "back": "chopp\nshēngpíjiǔ · lit. 'cerveja crua'; coloquial: 扎啤 zhāpǐ", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0069 (18/11)"}
+{"id": "chines-0084", "front": "买单", "back": "a conta, por favor (chamando o garçom)\nmǎidān · também: 结账 jiézhàng", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0070 (18/11)"}
+{"id": "chines-0085", "front": "podemos pagar separadamente?", "back": "我们可以分开付吗？\nwǒmen kěyǐ fēnkāi fù ma · 付 fù = pagar", "tags": ["restaurante"], "note": "espelho de italiano-0071 (18/11)"}
+{"id": "chines-0086", "front": "posso pagar com cartão?", "back": "可以刷卡吗？\nkěyǐ shuākǎ ma · 刷卡 shuākǎ = passar cartão", "tags": ["restaurante"], "note": "espelho de italiano-0072 (18/11)"}
+{"id": "chines-0087", "front": "se eu fosse você", "back": "如果我是你\nrúguǒ wǒ shì nǐ · 如果 rúguǒ = se", "tags": ["restaurante"], "note": "espelho de italiano-0438 (18/11)"}
+{"id": "chines-0088", "front": "不用找了", "back": "fique com o troco\nbúyòng zhǎo le · lit. 'não precisa dar troco'", "tags": ["restaurante"], "reverse": true, "typed": true, "note": "espelho de italiano-0439 (18/11)"}
+{"id": "chines-0089", "front": "estava tudo delicioso", "back": "一切都很好吃\nyíqiè dōu hěn hǎochī · 好吃 hǎochī = bom de comer", "tags": ["restaurante"], "note": "espelho de italiano-0440 (18/11)"}
+{"id": "chines-0090", "front": "um café, por favor", "back": "一杯咖啡，谢谢\nyì bēi kāfēi, xièxie · 杯 = classificador de copo", "tags": ["restaurante"], "note": "espelho de italiano-0441 (18/11)"}
+{"id": "chines-0091", "front": "bom apetite (dito pelo anfitrião)", "back": "请慢慢吃\nqǐng mànmàn chī · lit. 'coma devagar' — não há fórmula exata", "tags": ["comida"], "note": "espelho de italiano-0442 (18/11)"}
+{"id": "chines-0092", "front": "干杯", "back": "saúde! (brinde)\ngānbēi · lit. 'seca o copo'", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0443 (18/11)"}
+{"id": "chines-0093", "front": "我饿了", "back": "estou com fome\nwǒ è le · 饿 è = fome", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0444 (18/11)"}
+{"id": "chines-0094", "front": "我渴了", "back": "estou com sede\nwǒ kě le · 渴 kě = sede", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0445 (18/11)"}
+{"id": "chines-0095", "front": "好吃", "back": "é bom (comida)\nhǎochī · lit. 'bom de comer'", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0446 (18/11)"}
+{"id": "chines-0096", "front": "难吃", "back": "é ruim (comida)\nnánchī · lit. 'ruim de comer'", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0447 (18/11)"}
+{"id": "chines-0097", "front": "早餐", "back": "café da manhã\nzǎocān · coloquial: 早饭 zǎofàn", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0448 (18/11)"}
+{"id": "chines-0098", "front": "午餐", "back": "almoço\nwǔcān · coloquial: 午饭 wǔfàn", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0449 (18/11)"}
+{"id": "chines-0099", "front": "晚餐", "back": "jantar (a refeição)\nwǎncān · coloquial: 晚饭 wǎnfàn", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0450 (18/11)"}
+{"id": "chines-0100", "front": "卡布奇诺", "back": "um cappuccino\nkǎbùqínuǒ · transliteração", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0451 (18/11)"}
+{"id": "chines-0101", "front": "羊角面包", "back": "um croissant\nyángjiǎo miànbāo · lit. 'pão meia-lua'; padarias: 可颂 kěsòng", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0452 (18/11)"}
+{"id": "chines-0102", "front": "前菜", "back": "entrada (da refeição)\nqiáncài · 前 = antes", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0453 (18/11)"}
+{"id": "chines-0103", "front": "第一道菜", "back": "primeiro prato\ndì yī dào cài · 道 = classificador de pratos", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0454 (18/11)"}
+{"id": "chines-0104", "front": "第二道菜", "back": "segundo prato\ndì èr dào cài", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0455 (18/11)"}
+{"id": "chines-0105", "front": "配菜", "back": "acompanhamento\npèicài · 配 = acompanhar", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0456 (18/11)"}
+{"id": "chines-0106", "front": "甜点", "back": "sobremesa\ntiándiǎn · 甜 = doce", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0457 (18/11)"}
+{"id": "chines-0107", "front": "水果", "back": "fruta\nshuǐguǒ", "tags": ["comida"], "reverse": true, "typed": true, "note": "espelho de italiano-0458 (18/11)"}
+{"id": "chines-0108", "front": "estou só olhando", "back": "我只是看看\nwǒ zhǐshì kànkan · 看看 = dar uma olhada", "tags": ["compras"], "note": "espelho de italiano-0459 (18/11)"}
+{"id": "chines-0109", "front": "我在找…", "back": "estou procurando...\nwǒ zài zhǎo · 找 zhǎo = procurar", "tags": ["compras"], "reverse": true, "typed": true, "note": "espelho de italiano-0460 (18/11)"}
+{"id": "chines-0110", "front": "太贵了", "back": "é caro demais\ntài guì le · 太…了 = demais; 贵 guì = caro", "tags": ["compras"], "reverse": true, "typed": true, "note": "espelho de italiano-0461 (18/11)"}
+{"id": "chines-0111", "front": "tem desconto?", "back": "有折扣吗？\nyǒu zhékòu ma · 折扣 zhékòu = desconto", "tags": ["compras"], "note": "espelho de italiano-0462 (18/11)"}
+{"id": "chines-0112", "front": "posso experimentar (roupa)?", "back": "可以试穿吗？\nkěyǐ shìchuān ma · 试穿 = provar roupa", "tags": ["compras"], "note": "espelho de italiano-0463 (18/11)"}
+{"id": "chines-0113", "front": "onde ficam os provadores?", "back": "试衣间在哪儿？\nshìyījiān zài nǎr · 试衣间 = provador; 哪儿 = onde", "tags": ["compras"], "note": "espelho de italiano-0464 (18/11)"}
+{"id": "chines-0114", "front": "qual tamanho?", "back": "什么尺码？\nshénme chǐmǎ · 尺码 = tamanho de roupa", "tags": ["compras"], "note": "espelho de italiano-0465 (18/11)"}
+{"id": "chines-0115", "front": "我要这个", "back": "vou levar este\nwǒ yào zhège · 这个 = este", "tags": ["compras"], "reverse": true, "typed": true, "note": "espelho de italiano-0466 (18/11)"}
+{"id": "chines-0116", "front": "gostaria de trocar este", "back": "我想退换这个\nwǒ xiǎng tuìhuàn zhège · 退 = devolver · 换 = trocar", "tags": ["compras"], "note": "espelho de italiano-0467 (18/11)"}
+{"id": "chines-0117", "front": "posso pegar uma sacola?", "back": "可以给我一个袋子吗？\nkěyǐ gěi wǒ yí ge dàizi ma · 袋子 dàizi = sacola", "tags": ["compras"], "note": "espelho de italiano-0468 (18/11)"}
+{"id": "chines-0118", "front": "algo mais? (pergunta do vendedor)", "back": "还要别的吗？\nhái yào biéde ma · 还 hái = ainda", "tags": ["compras"], "note": "espelho de italiano-0469 (18/11)"}
+{"id": "chines-0119", "front": "é só isso, obrigado", "back": "就这些，谢谢\njiù zhèxiē, xièxie · 就 = apenas", "tags": ["compras"], "note": "espelho de italiano-0470 (18/11)"}
+{"id": "chines-0120", "front": "gostaria de uma passagem para...", "back": "我要一张去…的票\nwǒ yào yì zhāng qù... de piào · 票 piào = bilhete; 张 = classificador", "tags": ["viagem"], "note": "espelho de italiano-0471 (18/11)"}
+{"id": "chines-0121", "front": "往返票", "back": "ida e volta\nwǎngfǎn piào · 往 = ir · 返 = voltar", "tags": ["viagem"], "reverse": true, "typed": true, "note": "espelho de italiano-0472 (18/11)"}
+{"id": "chines-0122", "front": "单程票", "back": "só ida\ndānchéng piào · 单 = único · 程 = trecho", "tags": ["viagem"], "reverse": true, "typed": true, "note": "espelho de italiano-0473 (18/11)"}
+{"id": "chines-0123", "front": "a que horas o trem parte?", "back": "火车几点开？\nhuǒchē jǐ diǎn kāi · 几点 = que horas; 开 = partir", "tags": ["viagem"], "note": "espelho de italiano-0474 (18/11)"}
+{"id": "chines-0124", "front": "de qual plataforma?", "back": "在几号站台？\nzài jǐ hào zhàntái · 站台 = plataforma; 号 = número", "tags": ["viagem"], "note": "espelho de italiano-0475 (18/11)"}
+{"id": "chines-0125", "front": "机场", "back": "o aeroporto\njīchǎng · 场 = campo/lugar", "tags": ["viagem"], "reverse": true, "typed": true, "note": "espelho de italiano-0476 (18/11)"}
+{"id": "chines-0126", "front": "火车", "back": "o trem\nhuǒchē · lit. 'carro de fogo'", "tags": ["viagem"], "reverse": true, "typed": true, "note": "espelho de italiano-0477 (18/11)"}
+{"id": "chines-0127", "front": "营业中", "back": "aberto (comércio funcionando)\nyíngyè zhōng · lit. 'em operação' — placa nas portas", "tags": ["placas"], "reverse": true, "typed": true, "note": "espelho de italiano-0478 (18/11)"}
+{"id": "chines-0128", "front": "关门", "back": "fechado\nguānmén · lit. 'fechou a porta'; por hoje: 打烊了 dǎyàng le", "tags": ["placas"], "reverse": true, "typed": true, "note": "espelho de italiano-0479 (18/11)"}
+{"id": "chines-0129", "front": "入口", "back": "entrada (sinal)\nrùkǒu · 入 = entrar · 口 = abertura", "tags": ["placas"], "reverse": true, "typed": true, "note": "espelho de italiano-0480 (18/11)"}
+{"id": "chines-0130", "front": "出口", "back": "saída (sinal)\nchūkǒu · 出 = sair", "tags": ["placas"], "reverse": true, "typed": true, "note": "espelho de italiano-0481 (18/11)"}
+{"id": "chines-0131", "front": "我迷路了", "back": "eu me perdi\nwǒ mílù le · 迷路 mílù = perder o caminho", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0482 (18/11)"}
+{"id": "chines-0132", "front": "onde fica a estação (de trem)?", "back": "火车站在哪儿？\nhuǒchēzhàn zài nǎr · 站 zhàn = estação", "tags": ["direcoes"], "note": "espelho de italiano-0483 (18/11)"}
+{"id": "chines-0133", "front": "onde fica a parada de ônibus?", "back": "公交车站在哪儿？\ngōngjiāochēzhàn zài nǎr · 公交车 = ônibus", "tags": ["direcoes"], "note": "espelho de italiano-0484 (18/11)"}
+{"id": "chines-0134", "front": "地铁", "back": "o metrô\ndìtiě · lit. 'ferro subterrânea'; 地铁站 = estação", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0485 (18/11)"}
+{"id": "chines-0135", "front": "é longe daqui?", "back": "离这儿远吗？\nlí zhèr yuǎn ma · 离 = distância de · 远 yuǎn = longe", "tags": ["direcoes"], "note": "espelho de italiano-0486 (18/11)"}
+{"id": "chines-0136", "front": "é perto?", "back": "近吗？\njìn ma · 近 jìn = perto", "tags": ["direcoes"], "note": "espelho de italiano-0487 (18/11)"}
+{"id": "chines-0137", "front": "como eu chego em...?", "back": "去…怎么走？\nqù... zěnme zǒu · 怎么走 = como se anda até", "tags": ["direcoes"], "note": "espelho de italiano-0488 (18/11)"}
+{"id": "chines-0138", "front": "pode me mostrar no mapa?", "back": "可以在地图上指给我看吗？\nkěyǐ zài dìtú shàng zhǐ gěi wǒ kàn ma · 地图 = mapa · 指 = apontar", "tags": ["direcoes"], "note": "espelho de italiano-0489 (18/11)"}
+{"id": "chines-0139", "front": "一直走", "back": "sempre em frente\nyìzhí zǒu · 一直 = direto, sem parar", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0490 (18/11)"}
+{"id": "chines-0140", "front": "向右转", "back": "vire à direita\nxiàng yòu zhuǎn · 向 = para · 右 yòu = direita", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0491 (18/11)"}
+{"id": "chines-0141", "front": "向左转", "back": "vire à esquerda\nxiàng zuǒ zhuǎn · 左 zuǒ = esquerda", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0492 (18/11)"}
+{"id": "chines-0142", "front": "na primeira à direita", "back": "第一个路口右转\ndì yí ge lùkǒu yòu zhuǎn · 路口 = esquina/cruzamento", "tags": ["direcoes"], "note": "espelho de italiano-0493 (18/11)"}
+{"id": "chines-0143", "front": "na segunda à esquerda", "back": "第二个路口左转\ndì èr ge lùkǒu zuǒ zhuǎn", "tags": ["direcoes"], "note": "espelho de italiano-0494 (18/11)"}
+{"id": "chines-0144", "front": "在路口", "back": "no cruzamento\nzài lùkǒu · 路口 = boca de rua", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0495 (18/11)"}
+{"id": "chines-0145", "front": "在红绿灯", "back": "no semáforo\nzài hónglǜdēng · lit. 'luz vermelho-verde'", "tags": ["direcoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0496 (18/11)"}
+{"id": "chines-0146", "front": "附近", "back": "perto de (…附近)\nfùjìn · depois do lugar: 车站附近 = perto da estação", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0497 (18/11)"}
+{"id": "chines-0147", "front": "对面", "back": "em frente a (…对面)\nduìmiàn · lit. 'face a face'", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0498 (18/11)"}
+{"id": "chines-0148", "front": "后面", "back": "atrás (…后面)\nhòumiàn · 后 = atrás", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0499 (18/11)"}
+{"id": "chines-0149", "front": "前面", "back": "na frente (…前面)\nqiánmiàn · 前 = frente", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0500 (18/11)"}
+{"id": "chines-0150", "front": "上面", "back": "em cima (…上面)\nshàngmiàn · 上 = em cima", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0501 (18/11)"}
+{"id": "chines-0151", "front": "下面", "back": "embaixo (…下面)\nxiàmiàn · 下 = embaixo", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0502 (18/11)"}
+{"id": "chines-0152", "front": "里面", "back": "dentro (…里面)\nlǐmiàn · 里 = dentro", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0503 (18/11)"}
+{"id": "chines-0153", "front": "外面", "back": "fora (…外面)\nwàimiàn · 外 = fora", "tags": ["posicoes"], "reverse": true, "typed": true, "note": "espelho de italiano-0504 (18/11)"}
+{"id": "chines-0154", "front": "como você está? (informal)", "back": "你好吗？\nnǐ hǎo ma · 你好 + 吗 de pergunta", "tags": ["saudacoes"], "note": "espelho de italiano-0003 (18/11)"}
+{"id": "chines-0155", "front": "我很好", "back": "estou bem\nwǒ hěn hǎo", "tags": ["saudacoes"], "note": "espelho de italiano-0016 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0156", "front": "早上好", "back": "bom dia\nzǎoshang hǎo · lit. 'manhã boa'", "tags": ["saudacoes"], "note": "espelho de italiano-0002 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0157", "front": "晚安", "back": "boa noite (na hora de dormir)\nwǎn'ān · 晚 = noite + 安 = paz", "tags": ["saudacoes"], "note": "espelho de italiano-0004 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0158", "front": "回头见", "back": "até breve\nhuítóu jiàn · lit. 'vejo ao virar'; também: 一会儿见", "tags": ["saudacoes"], "note": "espelho de italiano-0005 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0159", "front": "请", "back": "por favor\nqǐng · cortesia geral: 'entre', 'às ordens'", "tags": ["cortesia"], "note": "espelho de italiano-0007 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0160", "front": "对不起", "back": "desculpa\nduìbùqǐ", "tags": ["cortesia"], "note": "espelho de italiano-0009 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0161", "front": "prazer em conhecer", "back": "很高兴认识你\nhěn gāoxìng rènshi nǐ · 高兴 = feliz · 认识 = conhecer", "tags": ["apresentacao"], "note": "espelho de italiano-0010 (18/11)"}
+{"id": "chines-0162", "front": "我叫…", "back": "meu nome é...\nwǒ jiào · 叫 = chamar-se", "tags": ["apresentacao"], "note": "espelho de italiano-0011 (18/11)", "reverse": true, "typed": true}
+{"id": "chines-0163", "front": "quanto custa?", "back": "多少钱？\nduōshao qián · 钱 qián = dinheiro", "tags": ["compras"], "note": "espelho de italiano-0012 (18/11)"}
+{"id": "chines-0164", "front": "onde fica o banheiro?", "back": "厕所在哪儿？\ncèsuǒ zài nǎr · 厕所 = banheiro", "tags": ["viagem"], "note": "espelho de italiano-0013 (18/11)"}
+{"id": "chines-0165", "front": "听不懂", "back": "não entendo (o que ouço)\ntīng bù dǒng · 听 = ouvir · 不懂 = não compreender", "tags": ["expressoes"], "note": "espelho de italiano-0014 (18/11)", "reverse": true, "typed": true}
